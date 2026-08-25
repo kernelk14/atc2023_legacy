@@ -1,0 +1,14 @@
+# Route all requests through the front controller (index.php)
+RewriteEngine On
+
+# Serve existing asset files/directories directly (css, js, images, fonts,
+# legacy/*.html, etc.) — but keep root-level .html requests on the routes.
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_URI} !^/[^/]+\.html?$
+RewriteRule ^ - [L]
+
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Everything else (including .html requests) goes to the front controller
+RewriteRule ^ index.php [QSA,L]

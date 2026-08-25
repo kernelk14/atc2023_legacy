@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="en" class="darkmode" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asian Track Championships | Tagaytay 2026</title>
+    <!--================= Favicon =================-->
+    <link rel="apple-touch-icon" href="assets/images/fav.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/fav.png">
+    <!--================= Bootstrap V5 CSS =================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <!--================= Font Awesome 5 CSS =================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/all.min.css">
+    <!--================= RT Icons CSS =================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/rt-icons.css">
+    <!--================= Animate css =================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.min.css">
+    <!--================= Magnific popup Plugin =================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+    <!--================= Animate css =================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/magnific.css">
+    <!--================= Animate css =================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.min.css">
+    <!--================= Swiper Slider Plugin =================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/swiper-bundle.min.css">
+    <!--================= Mobile Menu CSS =================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/metisMenu.css">
+    <!--================= Main Menu CSS =================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/rtsmenu.css">
+    <!--================= Main Stylesheet =================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/variables/variable1.css">
+    <!--================= Main Stylesheet =================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+    <style>
+         :root {
+            --hue: 223;
+            --bg: hsl(var(--hue), 90%, 90%);
+            --fg: hsl(var(--hue), 90%, 10%);
+            --primary: hsl(var(--hue), 90%, 50%);
+            --trans-dur: 0.3s;
+            font-size: calc(16px + (32 - 16) * (100vw - 320px) / (2560 - 320));
+        }
+        /* body {
+	background-color: var(--bg);
+	color: var(--fg);
+	display: flex;
+	font: 1em/1.5 sans-serif;
+	height: 100vh;
+	transition:
+		background-color var(--trans-dur),
+		color var(--trans-dur);
+} */
+        
+        .letterhead {
+            /* background: #f6f7e3; */
+            /* background: rgba(255, 255, 255, 0.95); */
+            /* border-bottom: 1px solid #e5e5e5; */
+        }
+        
+        .letterhead-inner {
+            display: flex;
+            justify-content: center;
+            /* centers horizontally */
+            align-items: center;
+            /* centers vertically */
+            padding: 10px 20px;
+        }
+        
+        .letterhead-logo {
+            max-width: 40%;
+            height: auto;
+        }
+        
+        .letterhead-logo {
+            max-width: 750px;
+            width: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            .letterhead-logo {
+                max-width: 90%;
+            }
+        }
+        
+        .bike {
+            display: block;
+            margin: auto;
+            width: 30em;
+            height: auto;
+        }
+        
+        .bike__body,
+        .bike__front,
+        .bike__handlebars,
+        .bike__pedals,
+        .bike__pedals-spin,
+        .bike__seat,
+        .bike__spokes,
+        .bike__spokes-spin,
+        .bike__tire {
+            animation: bikeBody 3s ease-in-out infinite;
+            stroke: var(--primary);
+            transition: stroke var(--trans-dur);
+        }
+        
+        .bike__front {
+            animation-name: bikeFront;
+        }
+        
+        .bike__handlebars {
+            animation-name: bikeHandlebars;
+        }
+        
+        .bike__pedals {
+            animation-name: bikePedals;
+        }
+        
+        .bike__pedals-spin {
+            animation-name: bikePedalsSpin;
+        }
+        
+        .bike__seat {
+            animation-name: bikeSeat;
+        }
+        
+        .bike__spokes,
+        .bike__tire {
+            stroke: currentColor;
+        }
+        
+        .bike__spokes {
+            animation-name: bikeSpokes;
+        }
+        
+        .bike__spokes-spin {
+            animation-name: bikeSpokesSpin;
+        }
+        
+        .bike__tire {
+            animation-name: bikeTire;
+        }
+        /* Dark theme */
+        
+        @media (prefers-color-scheme: dark) {
+             :root {
+                --bg: hsl(var(--hue), 90%, 10%);
+                --fg: hsl(var(--hue), 90%, 90%);
+            }
+        }
+        /* Animations */
+        
+        @keyframes bikeBody {
+            from {
+                stroke-dashoffset: 79;
+            }
+            33%,
+            67% {
+                stroke-dashoffset: 0;
+            }
+            to {
+                stroke-dashoffset: -79;
+            }
+        }
+        
+        @keyframes bikeFront {
+            from {
+                stroke-dashoffset: 19;
+            }
+            33%,
+            67% {
+                stroke-dashoffset: 0;
+            }
+            to {
+                stroke-dashoffset: -19;
+            }
+        }
+        
+        @keyframes bikeHandlebars {
+            from {
+                stroke-dashoffset: 10;
+            }
+            33%,
+            67% {
+                stroke-dashoffset: 0;
+            }
+            to {
+                stroke-dashoffset: -10;
+            }
+        }
+        
+        @keyframes bikePedals {
+            from {
+                animation-timing-function: ease-in;
+                stroke-dashoffset: -25.133;
+            }
+            33%,
+            67% {
+                animation-timing-function: ease-out;
+                stroke-dashoffset: -21.991;
+            }
+            to {
+                stroke-dashoffset: -25.133;
+            }
+        }
+        
+        @keyframes bikePedalsSpin {
+            from {
+                transform: rotate(0.1875turn);
+            }
+            to {
+                transform: rotate(3.1875turn);
+            }
+        }
+        
+        @keyframes bikeSeat {
+            from {
+                stroke-dashoffset: 5;
+            }
+            33%,
+            67% {
+                stroke-dashoffset: 0;
+            }
+            to {
+                stroke-dashoffset: -5;
+            }
+        }
+        
+        @keyframes bikeSpokes {
+            from {
+                animation-timing-function: ease-in;
+                stroke-dashoffset: -31.416;
+            }
+            33%,
+            67% {
+                animation-timing-function: ease-out;
+                stroke-dashoffset: -23.562;
+            }
+            to {
+                stroke-dashoffset: -31.416;
+            }
+        }
+        
+        @keyframes bikeSpokesSpin {
+            from {
+                transform: rotate(0);
+            }
+            to {
+                transform: rotate(3turn);
+            }
+        }
+        
+        @keyframes bikeTire {
+            from {
+                animation-timing-function: ease-in;
+                stroke-dashoffset: 56.549;
+                transform: rotate(0);
+            }
+            33% {
+                stroke-dashoffset: 0;
+                transform: rotate(0.33turn);
+            }
+            67% {
+                animation-timing-function: ease-out;
+                stroke-dashoffset: 0;
+                transform: rotate(0.67turn);
+            }
+            to {
+                stroke-dashoffset: -56.549;
+                transform: rotate(1turn);
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <style>
+        /* Custom style para maging mas dramatic at dark-theme friendly */
+        
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+            cursor: pointer;
+            /* Para alam ng user na pwedeng i-click */
+        }
+    </style>
+</head>
+
+<body>
+    <!--================= Preloader Section Start Here =================-->
+    <div id="rts__preloader">
+        <div class="main-fader responsive-height-comments">
+            <div class="loader">
+                <svg viewBox="0 0 866 866" xmlns="http://www.w3.org/2000/svg">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164.83 151.5">
+                        <svg class="bike" viewBox="0 0 75 30" width="250px" height="160px">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1">
+                                <g transform="translate(9.5,19)">
+                                    <circle class="bike__tire" r="9" stroke-dasharray="56.549 56.549" />
+                                    <g class="bike__spokes-spin" stroke-dasharray="31.416 31.416"
+                                        stroke-dashoffset="-23.562">
+                                        <circle class="bike__spokes" r="5" />
+                                        <circle class="bike__spokes" r="5" transform="rotate(180,0,0)" />
+                                    </g>
+                                </g>
+                                <g transform="translate(24,19)">
+                                    <g class="bike__pedals-spin" stroke-dasharray="25.133 25.133"
+                                        stroke-dashoffset="-21.991" transform="rotate(67.5,0,0)">
+                                        <circle class="bike__pedals" r="4" />
+                                        <circle class="bike__pedals" r="4" transform="rotate(180,0,0)" />
+                                    </g>
+                                </g>
+                                <g transform="translate(38.5,19)">
+                                    <circle class="bike__tire" r="9" stroke-dasharray="56.549 56.549" />
+                                    <g class="bike__spokes-spin" stroke-dasharray="31.416 31.416"
+                                        stroke-dashoffset="-23.562">
+                                        <circle class="bike__spokes" r="5" />
+                                        <circle class="bike__spokes" r="5" transform="rotate(180,0,0)" />
+                                    </g>
+                                </g>
+                                <polyline class="bike__seat" points="14 3,18 3" stroke-dasharray="5 5" />
+                                <polyline class="bike__body" points="16 3,24 19,9.5 19,18 8,34 7,24 19"
+                                    stroke-dasharray="79 79" />
+                                <path class="bike__handlebars" d="m30,2h6s1,0,1,1-1,1-1,1" stroke-dasharray="10 10" />
+                                <polyline class="bike__front" points="32.5 2,38.5 19" stroke-dasharray="19 19" />
+                            </g>
+                        </svg>
+                </svg>
+                </svg>
+
+
+                <!-- <svg viewBox="0 0 866 866" xmlns="http://www.w3.org/2000/svg">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164.83 151.5">
+                        <path class="path-0"
+                            d="M117.24,69.24A8,8,0,0,0,115.67,67c-4.88-4-9.8-7.89-14.86-11.62A4.93,4.93,0,0,0,96.93,55c-5.76,1.89-11.4,4.17-17.18,6a4.36,4.36,0,0,0-3.42,4.12c-1,6.89-2.1,13.76-3,20.66a4,4,0,0,0,1,3.07c5.12,4.36,10.39,8.61,15.68,12.76a3.62,3.62,0,0,0,2.92.75c6.29-2.66,12.52-5.47,18.71-8.36a3.49,3.49,0,0,0,1.68-2.19c1.34-7.25,2.54-14.55,3.9-22.58Z"
+                            fill="#e41b23" />
+                        <path class="path-1"
+                            d="M97.55,38.68A43.76,43.76,0,0,1,98,33.44c.41-2.36-.5-3.57-2.57-4.64C91.1,26.59,87,24,82.66,21.82a6.18,6.18,0,0,0-4-.71C73.45,22.55,68.32,24.25,63.22,26c-3.63,1.21-6.08,3.35-5.76,7.69a26.67,26.67,0,0,1-.6,4.92c-1.08,8.06-1.08,8.08,5.86,11.92,3.95,2.19,7.82,5.75,11.94,6.08s8.76-2.41,13.12-3.93c9.33-3.29,9.33-3.3,9.78-14Z"
+                            fill="#e41b23" />
+                        <path class="path-2"
+                            d="M66.11,126.56c5.91-.91,11.37-1.7,16.81-2.71a3.3,3.3,0,0,0,1.87-2.17c1-4.06,1.73-8.19,2.84-12.24.54-2-.11-3-1.55-4.15-5-4-9.9-8.12-15-12a6.19,6.19,0,0,0-4.15-1.1c-5.35.66-10.7,1.54-16,2.54A4,4,0,0,0,48.34,97a109.13,109.13,0,0,0-3,12.19,4.47,4.47,0,0,0,1.34,3.6c5.54,4.36,11.23,8.53,16.91,12.69a10.84,10.84,0,0,0,2.57,1.11Z"
+                            fill="#e41b23" />
+                        <path class="path-3"
+                            d="M127.42,104.12c4.1-2.1,8-3.93,11.72-6a6,6,0,0,0,2.27-3,58.22,58.22,0,0,0,3.18-29.92c-.26-1.7-8-7.28-9.71-6.85A5,5,0,0,0,133,59.65c-2.81,2.49-5.71,4.88-8.33,7.56a9.46,9.46,0,0,0-2.47,4.4c-1.29,6.49-2.38,13-3.35,19.55a5.73,5.73,0,0,0,.83,3.91c2.31,3.08,5,5.88,7.7,9Z"
+                            fill="#e41b23" />
+                        <path class="path-4"
+                            d="M52.58,29.89c-2.15-.36-3.78-.54-5.39-.9-2.83-.64-4.92.1-7,2.32A64.1,64.1,0,0,0,26.09,54.64c-2.64,7.92-2.62,7.84,5.15,10.87,1.76.69,2.73.45,3.93-1C39.79,59,44.54,53.65,49.22,48.2a4.2,4.2,0,0,0,1.13-2c.8-5.32,1.49-10.68,2.24-16.34Z"
+                            fill="#e41b23" />
+                        <path class="path-5" fill="#e41b23"
+                            d="M23,68.13c0,2.51,0,4.7,0,6.87a60.49,60.49,0,0,0,9.75,32.15c1.37,2.13,6.4,3,7,1.2,1.55-5,2.68-10.2,3.82-15.34.13-.58-.58-1.38-.94-2.06-2.51-4.77-5.47-9.38-7.45-14.37C32.94,71,28.22,69.84,23,68.13Z" />
+                        <path class="path-6" fill="#e41b23"
+                            d="M83.91,12.86c-.32.36-.66.71-1,1.07.9,1.13,1.57,2.62,2.73,3.33,4.71,2.84,9.56,5.48,14.39,8.1a9.29,9.29,0,0,0,3.13.83c5.45.69,10.89,1.38,16.35,1.94a10.41,10.41,0,0,0,3.07-.71c-11.48-9.9-24.26-14.61-38.71-14.56Z" />
+                        <path class="path-7" fill="#e41b23"
+                            d="M66.28,132.51c13.36,3.78,25.62,3.5,38-.9C91.68,129.59,79.36,128,66.28,132.51Z" />
+                        <path class="path-8" fill="#e41b23"
+                            d="M127.2,30.66l-1.27.37a18.58,18.58,0,0,0,1,3.08c3,5.52,6.21,10.89,8.89,16.54,1.34,2.83,3.41,3.82,6.49,4.9a60.38,60.38,0,0,0-15.12-24.9Z" />
+                        <path class="bb-9" fill="#e41b23"
+                            d="M117.35,125c5.58-2.32,16.9-13.84,18.1-19.2-2.41,1.46-5.18,2.36-6.78,4.23-4.21,5-7.89,10.37-11.32,15Z" />
+                    </svg>
+                </svg> -->
+            </div>
+        </div>
+    </div>
+    <!--================= Preloader End Here =================-->
+
+    <div class="anywere anywere-home"></div>
+
+    <!--================= Header Section Start Here =================-->
+    <header id="rtsHeader" class="rts-header1">
+        <div class="navbar-sticky">
+            <div class="navbar-part navbar-part1">
+                <div class="container">
+                    <div class="navbar-inner">
+                        <div class="letterhead">
+                            <div class="letterhead-inner">
+                                <a href="index.html"><img src="assets/images/banner/acc2026-lh.png" alt="ACC Letterhead" class="letterhead-logo"></a>
+                            </div>
+                        </div>
+                        <!-- <a href="index.html" class="logo"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png" alt="sportius-logo" width="110" height="150"></a>
+                        <a href="index.html" class="logo-sticky"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png" alt="kester-logo"></a> -->
+                        <div class="rts-menu">
+                            <nav class="menus menu-toggle">
+                                <ul class="nav__menu">
+                                    <li class="has-dropdown"><a class="menu-item" href="index.html">Home</a>
+                                        <!-- <ul class="dropdown-ul">
+                                            <li class=""><a class="dropdown-link active" href="index.html">Homepage
+                                                    1</a>
+                                            </li>
+                                             <li class="dropdown-li"><a class="dropdown-link"
+                                                    href="index-two.html">Homepage
+                                                    2</a></li>
+                                            <li class="dropdown-li"><a class="dropdown-link"
+                                                    href="index-three.html">Homepage 3</a></li> 
+                                        </ul> -->
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a class="menu-item" href="about.html">About</a>
+                                        <ul class="dropdown-ul">
+                                            <li class="dropdown-li"><a class="dropdown-link" href="about-organizer.html">About the City</a>
+                                                <li class="dropdown-li"><a class="dropdown-link" href="about-organizer.html">About the Competition</a>
+                                                    <li class="dropdown-li"><a class="dropdown-link" href="about-organizer.html">About the organizer</a>
+                                        </ul>
+
+                                        </li>
+
+                                        <li class="has-dropdown"><a class="menu-item" href="#">Competition Guide</a>
+                                            <ul class="dropdown-ul mega-dropdown">
+                                                <li class="mega-dropdown-li">
+                                                    <ul class="mega-dropdown-ul">
+                                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                                            href="match-schedule.html">Schedule</a>
+                                                    </li> -->
+                                                        <li class="dropdown-li"><a class="dropdown-link" href="team.html">Technical Guide</a>
+                                                        </li>
+
+                                                        <li class="dropdown-li"><a class="dropdown-link" href="venue.html">Vicinity Map of Velodrome</a>
+                                                        </li>
+
+                                                        <!--  <li class="dropdown-li"><a class="dropdown-link"
+                                                            href="league-standings.html">Awarding</a>
+                                                    </li> -->
+                                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                                            href="team-details.html">Player Details</a>
+                                                    </li>
+                                                    <li class="dropdown-li"><a class="dropdown-link"
+                                                        href="history.html">History</a>
+                                                    </li>
+                                                    <li class="dropdown-li"><a class="dropdown-link"
+                                                        href="awards.html">Awards</a>
+                                                    </li>
+                                                    <li class="dropdown-li"><a class="dropdown-link"
+                                                            href="faq.html">FAQ</a>
+                                                    </li> -->
+                                                    </ul>
+                                                </li>
+                                                <li class="mega-dropdown-li">
+                                                    <ul class="mega-dropdown-ul">
+                                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                                        href="team.html">Competition Format</a>
+                                                    </li> -->
+                                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                                            href="event.html">Event</a>
+                                                    </li>
+                                                    <li class="dropdown-li"><a class="dropdown-link"
+                                                            href="event-details.html">Event Details</a>
+                                                    </li>
+                                                    <li class="dropdown-li"><a class="dropdown-link"
+                                                            href="error.html">Error</a>
+                                                    </li>-->
+                                                    </ul>
+                                                </li>
+                                                <li class="mega-dropdown-li">
+                                                    <ul class="mega-dropdown-ul">
+                                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                                            href="match-schedule.html">Competition Schedule</a>
+                                                    </li> -->
+                                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                                            href="match-result.html">Competition
+                                                            Result</a>
+                                                    </li>
+                                                    <li class="dropdown-li"><a class="dropdown-link"
+                                                            href="league-standings.html">Point Table</a>
+                                                    </li> -->
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <!-- <li class="has-dropdown"><a class="menu-item" href="#">Shop</a>
+                                        <ul class="dropdown-ul">
+                                            <li class="dropdown-li"><a class="dropdown-link" href="shop.html">Shop</a>
+                                            </li>
+                                            <li class="dropdown-li"><a class="dropdown-link"
+                                                    href="product-details.html">Product Details</a></li>
+                                            <li class="dropdown-li"><a class="dropdown-link" href="cart.html">Cart</a>
+                                            </li>
+                                            <li class="dropdown-li"><a class="dropdown-link"
+                                                    href="checkout.html">Checkout</a></li>
+                                            <li class="dropdown-li"><a class="dropdown-link" href="account.html">My
+                                                    Account</a></li>
+                                            <li class="dropdown-li"><a class="dropdown-link" href="thank-you.html">Thank
+                                                    you</a></li>
+                                        </ul>
+                                    </li> -->
+                                        <!--  <li class="has-dropdown"><a class="menu-item" href="gallery.html">Gallery</a> -->
+                                        <ul class="dropdown-ul">
+                                            <!-- <li class="dropdown-li"><a class="dropdown-link" href="blog.html">News</a>
+                                            </li>
+                                            <li class="dropdown-li"><a class="dropdown-link"
+                                                    href="blog-details.html">News
+                                                    Details</a></li> -->
+                                        </ul>
+                                        </li>
+
+                                        <li class="has-dropdown"><a class="menu-item" href="#">Race Info</a>
+                                            <ul class="dropdown-ul">
+                                                <li class="dropdown-li"><a class="dropdown-link" href="race-schedule.html">Race Schedule</a></li>
+                                                <li class="dropdown-li"><a class="dropdown-link" href="start-list.html">Start Lists & Results</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-dropdown"><a class="menu-item" href="#">Contact Us</a>
+                                            <ul class="dropdown-ul">
+                                                <li class="dropdown-li"><a class="dropdown-link" href="organization.html">Organization</a></li>
+                                                <li class="dropdown-li"><a class="dropdown-link" href="#">Emergency Contact</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <!--  <li><a class="menu-item" href="contact.html">Contact</a></li> -->
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="header-action-items header-action-items1">
+                            <div class="search-part">
+                                <div class="search-icon action-item icon"><i class="rt-search"></i></div>
+                                <div class="search-input-area">
+                                    <div class="container">
+                                        <div class="search-input-inner">
+                                            <!-- <select class="custom-select select-hidden">
+                                                <option value="hide">All</option>
+                                                <option value="all">All</option>
+                                                <option value="league">League</option>
+                                                <option value="club">Club</option>
+                                                <option value="team">Team</option>
+                                                <option value="player">Player</option>
+                                                <option value="match">Competition</option>
+                                                <option value="score">Score</option> 
+                                            </select>-->
+                                            <div class="input-div">
+                                                <div class="search-input-icon"><i class="rt-search mr--10"></i></div>
+                                                <input id="searchInput1" class="search-input" type="text" placeholder="Search by keyword or #">
+                                            </div>
+                                            <div class="search-close-icon"><i class="rt-xmark"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="cart action-item">
+                                <div class="cart-nav">
+                                    <div class="basket-icon cart-icon icon"><a href="#0"><i
+                                                class="fal fa-shopping-basket"></i></a></div>
+                                </div>
+                            </div> -->
+                        </div>
+                        <a class="hamburger-menu aitem">
+                            <div class="hamburger-menu-inner">
+                                <span></span>
+                                <span class=""></span>
+                                <span></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-bar">
+            <div class="cart-header">
+                <h3 class="cart-heading">MY CART (3 ITEMS)</h3>
+                <div class="close-cart"><i class="fal fa-times"></i></div>
+            </div>
+            <div class="product-area">
+                <div class="product-item">
+                    <div class="product-detail">
+                        <div class="product-thumb"><img src="assets/images/products/product1.png" alt="product-thumb">
+                        </div>
+                        <div class="item-wrapper">
+                            <span class="product-name">Parachute Jacket</span>
+                            <div class="item-wrapper">
+                                <span class="product-variation"><span class="color">Green /</span>
+                                <span class="size">XL</span></span>
+                            </div>
+                            <div class="item-wrapper">
+                                <span class="product-qnty">3 ×</span>
+                                <span class="product-price">$198.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-edit">
+                        <div class="quantity-edit">
+                            <button class="button"><i class="fal fa-minus minus"></i></button>
+                            <input type="text" class="input" value="3" />
+                            <button class="button plus">+<i class="fal fa-plus plus"></i></button>
+                        </div>
+                        <div class="item-wrapper d-flex mr--5 align-items-center">
+                            <a href="#" class="product-edit"><i class="fal fa-edit"></i></a>
+                            <a href="#" class="delete-cart"><i class="fal fa-times"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-detail">
+                        <div class="product-thumb"><img src="assets/images/products/product2.png" alt="product-thumb">
+                        </div>
+                        <div class="item-wrapper">
+                            <span class="product-name">Narrow Trouser</span>
+                            <div class="item-wrapper">
+                                <span class="product-variation"><span class="color">Green /</span>
+                                <span class="size">XL</span></span>
+                            </div>
+                            <div class="item-wrapper">
+                                <span class="product-qnty">2 ×</span>
+                                <span class="product-price">$88.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-edit">
+                        <div class="quantity-edit">
+                            <button class="button"><i class="fal fa-minus minus"></i></button>
+                            <input type="text" class="input" value="2" />
+                            <button class="button plus">+<i class="fal fa-plus plus"></i></button>
+                        </div>
+                        <div class="item-wrapper d-flex mr--5 align-items-center">
+                            <a href="#" class="product-edit"><i class="fal fa-edit"></i></a>
+                            <a href="#" class="delete-cart"><i class="fal fa-times"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item last-child">
+                    <div class="product-detail">
+                        <div class="product-thumb"><img src="assets/images/products/product6.png" alt="product-thumb">
+                        </div>
+                        <div class="item-wrapper">
+                            <span class="product-name">Bellyless Hoodie</span>
+                            <div class="item-wrapper">
+                                <span class="product-variation"><span class="color">Green /</span>
+                                <span class="size">XL</span></span>
+                            </div>
+                            <div class="item-wrapper">
+                                <span class="product-qnty">1 ×</span>
+                                <span class="product-price">$289.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-edit">
+                        <div class="quantity-edit">
+                            <button class="button"><i class="fal fa-minus minus"></i></button>
+                            <input type="text" class="input" value="2" />
+                            <button class="button plus">+<i class="fal fa-plus plus"></i></button>
+                        </div>
+                        <div class="item-wrapper d-flex mr--5 align-items-center">
+                            <a href="#" class="product-edit"><i class="fal fa-edit"></i></a>
+                            <a href="#" class="delete-cart"><i class="fal fa-times"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-bottom-area">
+                <span class="spend-shipping"><i class="fal fa-truck"></i> SPENT <span class="amount">$199.00</span> MORE FOR FREE SHIPPING</span>
+                <span class="total-price">TOTAL: <span class="price">$556</span></span>
+                <a href="checkout.html" class="checkout-btn cart-btn">PROCEED TO CHECKOUT</a>
+                <a href="cart.html" class="view-btn cart-btn">VIEW CART</a>
+            </div>
+        </div>
+        <!--================= Slide Bar Start Here =================-->
+        <aside class="slide-bar">
+            <div class="offset-sidebar">
+                <button class="slide-bar-close ml--30"><i class="fal fa-times"></i></button>
+                <div class="offset-widget offset-logo mb-30">
+                    <a href="index.html">
+                        <img src="assets/images/2023_ACC_BMX_Letterhead_1.png" alt="logo">
+                    </a>
+                </div>
+            </div>
+            <!-- side-mobile-menu start -->
+            <nav class="side-mobile-menu side-mobile-menu1">
+                <ul id="mobile-menu-active">
+                    <!-- <li class="has-dropdown firstlvl">
+                        <a class="mm-link" href="index.html">Home<i class="rt-angle-down"></i></a>
+                         <ul class="sub-menu">
+                            <li><a href="index.html">Home Style 1</a></li>
+                            <li><a href="index-two.html">Home Style 2</a></li>
+                            <li><a href="index-three.html">Home Style 3</a></li>
+                        </ul> 
+                    </li>-->
+                    <li><a class="mm-link" href="index.html">Home</a></li>
+                    <li class="has-dropdown firstlvl">
+                        <a class="mm-link" href="about.html">About <i class="rt-angle-down"></i></a>
+                        <ul class="sub-menu mega-dropdown-mobile">
+                            <li class="mega-dropdown-li">
+                                <ul class="mega-dropdown-ul mm-show">
+                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                                                                        href="match-schedule.html">Schedule</a>
+                                                                                </li> -->
+                                    <!-- <li class="dropdown-li"><a class="dropdown-link" href="team-details.html">Player
+                                                                                        Details</a>
+                                                                                </li>
+                                                                                <li class="dropdown-li"><a class="dropdown-link" href="history.html">History</a>
+                                                                                </li>
+                                                                                <li class="dropdown-li"><a class="dropdown-link" href="faq.html">FAQ</a>
+                                                                                </li> -->
+                                </ul>
+                            </li>
+                            <li class="mega-dropdown-li">
+                                <ul class="mega-dropdown-ul mm-show">
+                                    <li class="dropdown-li"><a class="dropdown-link" href="about-city.html">About the City</a>
+                                        <li class="dropdown-li"><a class="dropdown-link" href="about-competition.html">About the Competition</a>
+                                            <li class="dropdown-li"><a class="dropdown-link" href="about-organizer.html">About the Organizer</a>
+                                                <!-- <li class="dropdown-li"><a class="dropdown-link" href="event-details.html">Event
+                                                                                        Details</a>
+                                                                                </li>
+                                                                                <li class="dropdown-li"><a class="dropdown-link" href="error.html">Error</a>
+                                                                                </li> -->
+                                </ul>
+                                </li>
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                                                                        href="league-standings.html">Awarding</a>
+                                                                                </li> -->
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="match-result.html">Match
+                                                                                        Result</a>
+                                                                                </li>
+                                                                                <li class="dropdown-li"><a class="dropdown-link" href="league-standings.html">Point Table</a>
+                                                                                </li> -->
+                                    </ul>
+                                </li>
+                        </ul>
+                        </li>
+                        <li class="has-dropdown firstlvl">
+                            <a class="mm-link" href="index.html">Competition Guide <i class="rt-angle-down"></i></a>
+                            <ul class="sub-menu mega-dropdown-mobile">
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                                                href="match-schedule.html">Schedule</a>
+                                                        </li> -->
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="team-details.html">Player
+                                                                Details</a>
+                                                        </li>
+                                                        <li class="dropdown-li"><a class="dropdown-link" href="history.html">History</a>
+                                                        </li>
+                                                        <li class="dropdown-li"><a class="dropdown-link" href="faq.html">FAQ</a>
+                                                        </li> -->
+                                    </ul>
+                                </li>
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <li class="dropdown-li"><a class="dropdown-link" href="team.html">Technical Handbook</a>
+                                        </li>
+                                        <li class="dropdown-li"><a class="dropdown-link" href="venue.html">Vicinity Map of Velodrome</a>
+                                        </li>
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="event-details.html">Event
+                                                                Details</a>
+                                                        </li>
+                                                        <li class="dropdown-li"><a class="dropdown-link" href="error.html">Error</a>
+                                                        </li> -->
+                                    </ul>
+                                </li>
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                                                href="league-standings.html">Awarding</a>
+                                                        </li> -->
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="match-result.html">Match
+                                                                Result</a>
+                                                        </li>
+                                                        <li class="dropdown-li"><a class="dropdown-link" href="league-standings.html">Point Table</a>
+                                                        </li> -->
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown firstlvl">
+                            <a class="mm-link" href="#">Race Info <i class="rt-angle-down"></i></a>
+                            <ul class="sub-menu mega-dropdown-mobile">
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                                                                                            href="match-schedule.html">Schedule</a>
+                                                                                                    </li> -->
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="team-details.html">Player
+                                                                                                            Details</a>
+                                                                                                    </li>
+                                                                                                    <li class="dropdown-li"><a class="dropdown-link" href="history.html">History</a>
+                                                                                                    </li>
+                                                                                                    <li class="dropdown-li"><a class="dropdown-link" href="faq.html">FAQ</a>
+                                                                                                    </li> -->
+                                    </ul>
+                                </li>
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <li class="dropdown-li"><a class="dropdown-link" href="race-schedule.html">Race Schedule</a>
+                                        </li>
+                                        <li class="dropdown-li"><a class="dropdown-link" href="start-list.html">Start Lists and Results</a>
+                                        </li>
+
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="event-details.html">Event
+                                                                                                            Details</a>
+                                                                                                    </li>
+                                                                                                    <li class="dropdown-li"><a class="dropdown-link" href="error.html">Error</a>
+                                                                                                    </li> -->
+                                    </ul>
+                                </li>
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                                                                                            href="league-standings.html">Awarding</a>
+                                                                                                    </li> -->
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="match-result.html">Match
+                                                                                                            Result</a>
+                                                                                                    </li>
+                                                                                                    <li class="dropdown-li"><a class="dropdown-link" href="league-standings.html">Point Table</a>
+                                                                                                    </li> -->
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown firstlvl">
+                            <a class="mm-link" href="#">Contact Us<i class="rt-angle-down"></i></a>
+                            <ul class="sub-menu mega-dropdown-mobile">
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                                                                                                                href="match-schedule.html">Schedule</a>
+                                                                                                                        </li> -->
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="team-details.html">Player
+                                                                                                                                Details</a>
+                                                                                                                        </li>
+                                                                                                                        <li class="dropdown-li"><a class="dropdown-link" href="history.html">History</a>
+                                                                                                                        </li>
+                                                                                                                        <li class="dropdown-li"><a class="dropdown-link" href="faq.html">FAQ</a>
+                                                                                                                        </li> -->
+                                    </ul>
+                                </li>
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <li class="dropdown-li"><a class="dropdown-link" href="organization.html">Organization</a>
+                                        </li>
+                                        <li class="dropdown-li"><a class="dropdown-link" href="#">Emergency Contact</a>
+                                        </li>
+
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="event-details.html">Event
+                                                                                                                                Details</a>
+                                                                                                                        </li>
+                                                                                                                        <li class="dropdown-li"><a class="dropdown-link" href="error.html">Error</a>
+                                                                                                                        </li> -->
+                                    </ul>
+                                </li>
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                                                                                                                href="league-standings.html">Awarding</a>
+                                                                                                                        </li> -->
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="match-result.html">Match
+                                                                                                                                Result</a>
+                                                                                                                        </li>
+                                                                                                                        <li class="dropdown-li"><a class="dropdown-link" href="league-standings.html">Point Table</a>
+                                                                                                                        </li> -->
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- <li class="has-dropdown firstlvl">
+                        <a class="mm-link" href="index.html">Shop <i class="rt-angle-down"></i></a>
+                        <ul class="sub-menu">
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="product-details.html">Product Details</a></li>
+                            <li><a href="cart.html">cart</a></li>
+                            <li><a href="checkout.html">Checkout</a></li>
+                            <li><a href="account.html">My Account</a></li>
+                            <li><a href="thank-you.html">Thank You</a></li>
+                        </ul>
+                    </li> -->
+                        <!-- <li class="has-dropdown firstlvl">
+                        <a class="mm-link" href="gallery.html">Gallery <i class="rt-angle-down"> </i></a>
+                        <ul class="sub-menu">
+                            <li><a href="blog.html">G</a></li>
+                            <li><a href="blog-details.html">News Details</a></li>
+                        </ul> 
+                    </li> -->
+                        <!--    <li><a class="mm-link" href="gallery.html">Gallery</a></li>
+                    <li><a class="mm-link" href="contact.html">Contact</a></li> -->
+                </ul>
+            </nav>
+            <!-- side-mobile-menu end -->
+            <div class="side-bar-social-links">
+                <!--   <a href="https://www.facebook.com/profile.php?id=100094321766590" class="platform"><i
+                        class="fab fa-facebook-f"></i></a> -->
+                <!-- <a href="#0" class="platform"><i class="fab fa-twitter"></i></a>
+                <a href="#0" class="platform"><i class="fab fa-behance"></i></a>
+                <a href="#0" class="platform"><i class="fab fa-youtube"></i></a> -->
+            </div>
+        </aside>
+        <!--================= Slide Bar Start Here =================-->
+        <!--================= Banner Section Start Here =================-->
+        <div class="banner banner1">
+            <div class="inner-page-banner banner-bg">
+                <div class="container">
+                    <div class="banner-content">
+                        <div class="page-path">
+                            <ul>
+                                <li class="dropdown-li"><a class="dropdown-link" href="#">CONTACT US</a>
+                                    <li class="dropdown-li"><a class="dropdown-link" href="#">ORGANIZATION</a>
+                            </ul>
+                        </div>
+                        <h1 class="banner-heading">ABOUT THE ORGANIZATION</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--================= Banner Section End Here =================-->
+    </header>
+    <!--================= Header Section End Here =================-->
+
+
+    <!--================= Team Section Start Here =================-->
+
+    <!--================= Team Section End Here =================-->
+
+    <!--================= Additional 1 Section Start Here =================-->
+
+    <!-- MAIN CONTENT -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <div class="rts-org-section" style="position: relative; background: #0b0b15; overflow: hidden; padding-top: 120px; padding-bottom: 150px; min-height: 100vh;">
+
+        <div class="tech-orb orb-blue"></div>
+        <div class="tech-orb orb-red"></div>
+        <div class="tech-orb orb-sun"></div>
+
+        <div class="bg-grid-overlay"></div>
+
+        <div class="container" style="position: relative; z-index: 5;">
+
+            <div class="row justify-content-center mb--80">
+                <div class="col-lg-8 text-center" data-aos="fade-down" data-aos-duration="1000">
+                    <div class="title-badge">
+                        <span style="color:#0038A8">PHIL</span><span style="color:#FCD116">CYC</span><span style="color:#CE1126">LING</span>
+                    </div>
+                    <h2 class="main-title">ORGANIZATIONAL STRUCTURE</h2>
+                    <p class="sub-text">The visionaries behind the Integrated Cycling Federation of the Philippines.</p>
+                    <div class="separator-line"></div>
+                </div>
+            </div>
+
+            <style>
+                /* --- PH THEME COLORS --- */
+                
+                 :root {
+                    --ph-blue: #0038A8;
+                    --ph-red: #CE1126;
+                    --ph-yellow: #FCD116;
+                    --ph-white: #FFFFFF;
+                }
+                /* --- BACKGROUND ANIMATIONS --- */
+                
+                .bg-grid-overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+                    background-size: 50px 50px;
+                    opacity: 0.2;
+                    pointer-events: none;
+                    z-index: 1;
+                }
+                
+                .tech-orb {
+                    position: absolute;
+                    border-radius: 50%;
+                    filter: blur(90px);
+                    opacity: 0.45;
+                    z-index: 0;
+                    animation: floatOrb 12s infinite alternate;
+                }
+                /* The Flag Colors Positioning */
+                
+                .orb-blue {
+                    width: 600px;
+                    height: 600px;
+                    background: var(--ph-blue);
+                    top: -150px;
+                    left: -100px;
+                    /* Top Left */
+                }
+                
+                .orb-red {
+                    width: 600px;
+                    height: 600px;
+                    background: var(--ph-red);
+                    bottom: -150px;
+                    right: -100px;
+                    /* Bottom Right */
+                    animation-delay: 2s;
+                }
+                
+                .orb-sun {
+                    width: 400px;
+                    height: 400px;
+                    background: var(--ph-yellow);
+                    top: 15%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    /* Behind President */
+                    opacity: 0.3;
+                    filter: blur(100px);
+                }
+                
+                @keyframes floatOrb {
+                    from {
+                        transform: translate(0, 0) scale(1);
+                    }
+                    to {
+                        transform: translate(30px, 30px) scale(1.1);
+                    }
+                }
+                /* --- TYPOGRAPHY --- */
+                
+                .title-badge {
+                    font-weight: 800;
+                    letter-spacing: 3px;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    margin-bottom: 15px;
+                    display: inline-block;
+                    background: rgba(255, 255, 255, 0.05);
+                    padding: 8px 20px;
+                    border-radius: 50px;
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    color: #fff;
+                }
+                
+                .main-title {
+                    color: #fff;
+                    font-size: 3.5rem;
+                    text-transform: uppercase;
+                    font-weight: 800;
+                    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+                    letter-spacing: -1px;
+                    margin-bottom: 15px;
+                }
+                
+                .sub-text {
+                    color: #aaa;
+                    font-size: 1.1rem;
+                    max-width: 600px;
+                    margin: 0 auto;
+                }
+                
+                .separator-line {
+                    width: 180px;
+                    height: 3px;
+                    margin: 30px auto 0;
+                    border-radius: 2px;
+                    /* Blue to Red Gradient na may Fade sa dulo */
+                    background: linear-gradient(90deg, transparent, #0038A8, #CE1126, transparent);
+                    opacity: 0.7;
+                }
+                /* --- TREE STRUCTURE --- */
+                
+                .org-tree {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 80px;
+                }
+                
+                .org-row {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    gap: 30px;
+                    position: relative;
+                    width: 100%;
+                    perspective: 1000px;
+                }
+                /* Connecting Lines - White/Gray for neutrality */
+                
+                .org-row:not(:last-child)::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -80px;
+                    left: 50%;
+                    width: 2px;
+                    height: 80px;
+                    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+                    transform: translateX(-50%);
+                    z-index: 0;
+                }
+                
+                .split-branch {
+                    position: relative;
+                    margin-top: 20px;
+                }
+                
+                .split-branch::before {
+                    content: '';
+                    position: absolute;
+                    top: -40px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 320px;
+                    height: 40px;
+                    border-top: 2px solid rgba(255, 255, 255, 0.2);
+                    border-left: 2px solid rgba(255, 255, 255, 0.2);
+                    border-right: 2px solid rgba(255, 255, 255, 0.2);
+                    z-index: 0;
+                }
+                /* --- CARD DESIGN --- */
+                
+                .org-card {
+                    position: relative;
+                    width: 300px;
+                    padding: 40px 25px;
+                    background: rgba(255, 255, 255, 0.03);
+                    backdrop-filter: blur(15px);
+                    -webkit-backdrop-filter: blur(15px);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    border-radius: 20px;
+                    text-align: center;
+                    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+                    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+                    overflow: hidden;
+                }
+                /* Shine Effect */
+                
+                .org-card::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 50%;
+                    height: 100%;
+                    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.05), transparent);
+                    transform: skewX(-25deg);
+                    transition: 0.5s;
+                    pointer-events: none;
+                }
+                
+                .org-card:hover::before {
+                    left: 150%;
+                }
+                
+                .org-card:hover {
+                    transform: translateY(-15px);
+                    background: rgba(40, 40, 55, 0.6);
+                    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+                }
+                /* Image Container */
+                
+                .org-img-wrap {
+                    width: 130px;
+                    height: 130px;
+                    margin: 0 auto 25px;
+                    position: relative;
+                    border-radius: 50%;
+                    padding: 5px;
+                    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), transparent);
+                    overflow: hidden;
+                }
+                /* !!! THE FIX IS HERE (center top) !!! */
+                
+                .org-img-wrap img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center top;
+                    /* NAKA-CENTER TOP NA */
+                    border-radius: 50%;
+                    border: 3px solid rgba(255, 255, 255, 0.1);
+                    transition: transform 0.5s ease;
+                }
+                
+                .org-card:hover .org-img-wrap img {
+                    transform: scale(1.1);
+                }
+                /* Text */
+                
+                .name {
+                    font-size: 20px;
+                    font-weight: 800;
+                    color: #fff;
+                    text-transform: uppercase;
+                    margin-bottom: 8px;
+                    line-height: 1.2;
+                }
+                
+                .role {
+                    font-size: 13px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    letter-spacing: 1.5px;
+                    display: block;
+                }
+                /* --- RANK THEMES (Flag Colors) --- */
+                /* PRESIDENT = SUN (Yellow/Gold) */
+                
+                .boss-card {
+                    border-color: rgba(252, 209, 22, 0.4);
+                    width: 360px;
+                    background: linear-gradient(180deg, rgba(30, 30, 40, 0.8), rgba(20, 20, 10, 0.9));
+                }
+                
+                .boss-card .org-img-wrap {
+                    border: 2px solid var(--ph-yellow);
+                    box-shadow: 0 0 20px rgba(252, 209, 22, 0.2);
+                }
+                
+                .boss-card .name {
+                    font-size: 26px;
+                    color: var(--ph-yellow);
+                }
+                
+                .boss-card .role {
+                    color: #fff;
+                    opacity: 0.9;
+                }
+                
+                .boss-card:hover {
+                    border-color: var(--ph-yellow);
+                    box-shadow: 0 30px 80px rgba(252, 209, 22, 0.15);
+                }
+                /* VPs/Congress/Mayors = BLUE (Peace/Justice) */
+                
+                .vip-card .org-img-wrap {
+                    border-color: rgba(0, 56, 168, 0.3);
+                }
+                
+                .vip-card .role {
+                    color: #4dabf7;
+                }
+                
+                .vip-card:hover {
+                    border-color: var(--ph-blue);
+                    box-shadow: 0 20px 50px rgba(0, 56, 168, 0.2);
+                }
+                
+                .vip-card:hover .org-img-wrap {
+                    border-color: var(--ph-blue);
+                }
+                /* DIRECTORS = RED (Valor/Action) */
+                
+                .dir-card .org-img-wrap {
+                    border-color: rgba(206, 17, 38, 0.3);
+                }
+                
+                .dir-card .role {
+                    color: #ff6b6b;
+                }
+                
+                .dir-card:hover {
+                    border-color: var(--ph-red);
+                    box-shadow: 0 20px 50px rgba(206, 17, 38, 0.2);
+                }
+                
+                .dir-card:hover .org-img-wrap {
+                    border-color: var(--ph-red);
+                }
+                /* TD Special - White/Neutral */
+                
+                .td-card {
+                    border: 1px solid rgba(255, 255, 255, 0.2);
+                }
+                
+                .td-card .role {
+                    color: var(--ph-yellow);
+                    font-weight: bold;
+                }
+                /* Mobile Fix */
+                /* --- MOBILE FIX (UPDATED) --- */
+                
+                @media (max-width: 768px) {
+                    .main-title {
+                        font-size: 2rem;
+                        line-height: 1.1;
+                    }
+                    .org-tree {
+                        gap: 40px;
+                    }
+                    .org-row:not(:last-child)::after,
+                    .split-branch::before {
+                        display: none;
+                    }
+                    /* Force fit sa screen ang mga cards */
+                    .org-card,
+                    .boss-card,
+                    .td-card {
+                        width: 100% !important;
+                        max-width: 320px !important;
+                        margin: 0 auto;
+                    }
+                    .tech-orb {
+                        opacity: 0.3;
+                    }
+                }
+            </style>
+
+            <div class="org-tree">
+
+                <div class="org-row">
+                    <div class="org-card boss-card" data-aos="zoom-in" data-aos-duration="1200">
+                        <div class="org-img-wrap">
+                            <img src="assets/images/organization/Dato-Amarjit Singh-Gill.jpg" alt="Dato Amarjit Singh Gill" loading="lazy">
+                        </div>
+                        <h3 class="name">Dato' Amarjit Singh Gill</h3>
+                        <span class="role"><i class="fas fa-sun" style="color:#FCD116; margin-right:5px;"></i>Vice President & President</span>
+                        <span class="role" style="font-size: 10px; opacity: 0.6; margin-top: 5px; color:#fff;">UCI & ACC</span>
+                    </div>
+                    <div class="org-card boss-card" data-aos="zoom-in" data-aos-duration="1200">
+                        <div class="org-img-wrap">
+                            <img src="assets/images/organization/abraham-tolentino.jpg" alt="Abraham Tolentino" loading="lazy">
+                        </div>
+                        <h3 class="name">Abraham N. Tolentino</h3>
+                        <span class="role"><i class="fas fa-sun" style="color:#FCD116; margin-right:5px;"></i>President</span>
+                        <span class="role" style="font-size: 10px; opacity: 0.6; margin-top: 5px; color:#fff;">Integrated Cycling Federation of the Philippines</span>
+                    </div>
+                </div>
+
+                <div class="org-row">
+                    <div class="org-card vip-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="org-img-wrap">
+                            <img src="assets/images/organization/oscar-rodriguez.jpg" alt="Oscar Rodriguez" loading="lazy">
+                        </div>
+                        <h4 class="name">Oscar D. Rodriguez Jr.</h4>
+                        <span class="role">Vice President</span>
+                        <small style="color:#bbb; font-size:11px; display:block; margin-top:4px;">Integrated Cycling Federation of the Philippines</small>
+                    </div>
+                    <div class="org-card vip-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="org-img-wrap">
+                            <img src="assets/images/organization/aniela-tolentino.jpg" alt="Aniela Bianca Tolentino" loading="lazy">
+                        </div>
+                        <h4 class="name">Hon. Aniela Bianca D. Tolentino</h4>
+                        <span class="role">Congresswoman</span>
+                        <small style="color:#bbb; font-size:11px; display:block; margin-top:4px;">8th District of Cavite</small>
+                    </div>
+                    <div class="org-card vip-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="org-img-wrap">
+                            <img src="assets/images/organization/avelino-sumagui.jpg" alt="Avelino Sumagui" loading="lazy">
+                        </div>
+                        <h4 class="name">Atty. Avelino M. Sumagui</h4>
+                        <span class="role">Secretary General</span>
+                        <small style="color:#bbb; font-size:11px; display:block; margin-top:4px;">Integrated Cycling Federation of the Philippines</small>
+                    </div>
+                </div>
+
+                <div class="org-row split-branch" style="justify-content: center;">
+                    <div class="org-card vip-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="org-img-wrap">
+                            <img src="assets/images/organization/athena-tolentino.jpg" alt="Athena Bryana Tolentino" loading="lazy">
+                        </div>
+                        <h4 class="name">Hon. Athena Bryana D. Tolentino</h4>
+                        <span class="role">Former Governor</span>
+                        <small style="color:#bbb; font-size:11px; display:block; margin-top:4px;">Provincial Gov't of Cavite</small>
+                    </div>
+                    <div class="org-card vip-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="org-img-wrap">
+                            <img src="assets/images/organization/aizack-tolentino.jpg" alt="Hon. Aizack Tolentino" loading="lazy">
+                        </div>
+                        <h4 class="name">Hon. Aizack Brent D. Tolentino</h4>
+                        <span class="role">Tagaytay City Mayor</span>
+                    </div>
+                    <div class="org-card vip-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="org-img-wrap">
+                            <img src="assets/images/organization/agnes-tolentino.jpg" alt="Hon. Agnes D. Tolentino" loading="lazy">
+                        </div>
+                        <h4 class="name">Hon. Agnes D. Tolentino</h4>
+                        <span class="role">Tagaytay City Vice Mayor</span>
+                    </div>
+                </div>
+
+                <div class="org-row">
+                    <div class="org-card td-card" style="width: 340px;" data-aos="zoom-in-up" data-aos-delay="600">
+                        <div class="org-img-wrap">
+                            <img src="assets/images/organization/kamilla-sumagui.jpg" alt="Kamilla Sumagui" loading="lazy">
+                        </div>
+                        <h4 class="name">Kamilla M. Sumagui</h4>
+                        <span class="role"><i class="fas fa-star" style="font-size:10px; vertical-align:middle; margin-right:5px;"></i>Tournament Director</span>
+                    </div>
+                </div>
+
+                <div class="org-row">
+                    <div class="org-card dir-card" data-aos="fade-up" data-aos-delay="700">
+                        <div class="org-img-wrap">
+                            <img src="assets/images/organization/joshua-sumagui.jpg" alt="Joshua Sumagui" style="object-position: center 70%;" loading="lazy">
+                        </div>
+                        <h4 class="name">Joshua Noel G. Sumagui</h4>
+                        <span class="role">Asst. Tournament Director</span>
+                        <small style="color:#ff6b6b; font-size:11px; display:block; margin-top:4px;">Technical Matters</small>
+                    </div>
+                    <div class="org-card dir-card" data-aos="fade-up" data-aos-delay="800">
+                        <div class="org-img-wrap">
+                            <img src="assets/images/organization/lorenzo-lomibao.jpg" alt="Lorenzo Lomibao" loading="lazy">
+                        </div>
+                        <h4 class="name">Lorenzo M. Lomibao Jr.</h4>
+                        <span class="role">Asst. Tournament Director</span>
+                        <small style="color:#ff6b6b; font-size:11px; display:block; margin-top:4px;">Marketing & Media</small>
+                    </div>
+                </div>
+
+                <div class="org-row">
+                    <div class="org-card dir-card" data-aos="fade-up" data-aos-delay="900">
+                        <div class="org-img-wrap">
+                            <img src="assets/images/organization/joshua-alvarez.jpg" alt="Joshua Alvarez" loading="lazy">
+                        </div>
+                        <h4 class="name">Joshua L. Alvarez</h4>
+                        <span class="role">Director</span>
+                        <small style="color:#bbb; font-size:11px; display:block; margin-top:4px;">International Relations</small>
+                    </div>
+                    <!-- <div class="org-card dir-card" data-aos="fade-up" data-aos-delay="1000">
+                        <div class="org-img-wrap">
+                            <img src="assets/images/organization/sunshine-mendoza.jpg" alt="Sunshine Mendoza" loading="lazy">
+                        </div>
+                        <h4 class="name">Sunshine Mendoza</h4>
+                        <span class="role">Asst. Tournament Director</span>
+                        <small style="color:#ff6b6b; font-size:11px; display:block; margin-top:4px;">Sporting Control</small>
+                    </div> -->
+                    <div class="org-card dir-card" data-aos="fade-up" data-aos-delay="1100">
+                        <div class="org-img-wrap">
+                            <img src="assets/images/organization/adrian-caraan.jpg" alt="Adrian Caraan" loading="lazy">
+                        </div>
+                        <h4 class="name">Adrian M. Caraan</h4>
+                        <span class="role">Director</span>
+                        <small style="color:#bbb; font-size:11px; display:block; margin-top:4px;">Venue & Logistics</small>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 900,
+            easing: 'ease-out-cubic',
+        });
+    </script>
+    <!-- OLD CONTENT DOWNLOAD  -->
+
+    </div>
+    </div>
+
+    </div>
+    </div>
+    </div>
+    <!--================= Additional 1 Section End Here =================-->
+
+    <!--================= Additional 2 Start Here =================-->
+
+
+    <!--================= Additional 2 End Here =================-->
+
+    <!--================= Additional 3 Section Start Here =================-->
+
+
+    <!--================= Additional 3 Section End Here =================-->
+
+
+
+
+
+
+
+    <!--================= Team Details Section Start Here =================-->
+
+
+    <!-- ================= Team Details Section End Here ================= -->
+
+    <!-- logos offical -->
+    <div style="background-color: #0b0b15; width: 100%; padding: 20px 0 100px 0; position: relative; z-index: 5;">
+
+        <div class="container">
+            <div class="affiliations-panel" data-aos="fade-up" data-aos-delay="500" style="background: #14141a; border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 50px 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <p style="color: #FCD116; font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 40px; font-weight: 800; text-shadow: 0 0 10px rgba(252, 209, 22, 0.3);">
+                            — Officially Recognized By —
+                        </p>
+
+                        <div class="affiliations-wrapper" style="display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; align-items: center;">
+
+                            <div class="partner-logo">
+                                <h2 class="metallic-text">UCI</h2>
+                                <span class="partner-subtext">Union Cycliste<br>Internationale</span>
+                            </div>
+
+                            <div class="partner-logo">
+                                <h2 class="metallic-text">ACC</h2>
+                                <span class="partner-subtext">Asian Cycling<br>Confederation</span>
+                            </div>
+
+                            <div class="partner-logo">
+                                <h2 class="metallic-text">POC</h2>
+                                <span class="partner-subtext">Philippine Olympic<br>Committee</span>
+                            </div>
+
+                            <div class="partner-logo">
+                                <h2 class="metallic-text">PSC</h2>
+                                <span class="partner-subtext">Philippine Sports<br>Commission</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <style>
+        .partner-logo {
+            text-align: center;
+            opacity: 0.7;
+            transition: all 0.4s ease;
+            cursor: default;
+            transform: scale(0.95);
+        }
+        
+        .partner-logo:hover {
+            opacity: 1;
+            transform: scale(1.05) translateY(-5px);
+        }
+        /* Metallic Text Effect */
+        
+        .metallic-text {
+            margin: 0;
+            font-weight: 900;
+            letter-spacing: -2px;
+            font-size: 3.5rem;
+            /* Pwede mong gawing 3rem kung masyadong malaki */
+            background: linear-gradient(to bottom, #ffffff, #777777);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.8));
+        }
+        
+        .partner-subtext {
+            font-size: 11px;
+            color: #888 !important;
+            display: block;
+            text-transform: uppercase;
+            margin-top: 5px;
+            letter-spacing: 1px;
+        }
+        /* Gold hover effect */
+        
+        .partner-logo:hover .metallic-text {
+            background: linear-gradient(to bottom, #FCD116, #B8860B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0px 0px 15px rgba(252, 209, 22, 0.6));
+        }
+    </style>
+    <!--================= Footer End Here =================-->
+
+
+    <!--================= Scroll to Top Start =================-->
+    <div class="scroll-top-btn scroll-top-btn1"><i class="fas fa-angle-up arrow-up"></i><i class="fas fa-circle-notch"></i></div>
+    <!--================= Scroll to Top End =================-->
+
+    <!--================= Jquery latest version =================-->
+    <script src="assets/js/vendors/jquery-3.6.0.min.js"></script>
+    <!--================= Bootstrap latest version =================-->
+    <script src="assets/js/vendors/bootstrap.min.js"></script>
+    <!--================= Wow.js =================-->
+    <script src="assets/js/vendors/wow.min.js"></script>
+    <!--================= Swiper Slider =================-->
+    <script src="assets/js/vendors/swiper-bundle.min.js"></script>
+    <!--================= Zoom Plugin =================-->
+    <script src="assets/js/vendors/zoom.js"></script>
+    <!--================= metisMenu Plugin =================-->
+    <script src="assets/js/vendors/metisMenu.min.js"></script>
+    <!--================= Main Menu Plugin =================-->
+    <script src="assets/js/vendors/rtsmenu.js"></script>
+    <!--================= Mobile Menu Plugin =================-->
+    <script src="assets/js/vendors/metisMenu.min.js"></script>
+    <!--================= Magnefic Popup Plugin =================-->
+    <script src="assets/js/vendors/isotope.pkgd.min.js"></script>
+    <!--================= Magnefic Popup Plugin =================-->
+    <script src="assets/js/vendors/jquery.magnific-popup.min.js"></script>
+    <!--================= Main Script =================-->
+    <script src="assets/js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1, // Ilang slide ang kita sa isang tingin
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 5000, // 5 seconds bago mag-slide
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+</body>
+
+</html>
