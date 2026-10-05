@@ -457,7 +457,7 @@ $view->open([
             <div class="row mb-5">
                 <div class="col-12 text-center" data-aos="fade-up">
                     <div class="eyebrow-text">THE VENUE</div>
-                    <h1 class="venue-main-title">TAGAYTAY CITY VELODROME</h1>
+                    <h1 class="venue-main-title">TAGAYTAY CT VELODROME</h1>
                     <p class="venue-subtitle">Home of the Track Asia Cup 2026</p>
                     <div class="blue-separator"></div>
                 </div>
@@ -543,14 +543,15 @@ $view->open([
                             <h3>Nearby Accommodation</h3>
                         </div>
                         <ul class="spec-list">
-                            <li>
-                                <div class="icon-box"><i class="fas fa-hotel"></i></div>
+                            <li class="accommodation-note">
+                                <div class="icon-box"><i class="fas fa-info"></i></div>
                                 <div>
-                                    <span class="label">Taal Vista Hotel</span>
-                                    <span class="value">5-star • <span class="highlight-blue">2 mins drive</span></span>
+                                    <span class="label">All participants must book through the local organizing committee.</span>
+                                    <!--<span class="value">5-star • <span class="highlight-blue">1 min drive</span></span>-->
                                 </div>
                             </li>
-                            <li>
+                            
+                            <!--<li>
                                 <div class="icon-box"><i class="fas fa-bed"></i></div>
                                 <div>
                                     <span class="label">Summit Ridge Tagaytay</span>
@@ -558,12 +559,14 @@ $view->open([
                                 </div>
                             </li>
                             <li>
-                                <div class="icon-box"><i class="fas fa-building"></i></div>
+                                <div class="icon-box"><i class="fas fa-building">
+                                    
+                                </i></div>
                                 <div>
                                     <span class="label">Pico de Loro Condos</span>
                                     <span class="value">Apartelle • <span class="highlight-blue">20 min drive</span></span>
                                 </div>
-                            </li>
+                            </li>-->
                         </ul>
                     </div>
                 </div>
@@ -639,7 +642,35 @@ $view->open([
             font-weight: 300;
             letter-spacing: 1px;
         }
-        
+
+        .accommodation-note {
+            justify-content: center !important;
+            align-items: flex-start !important;
+            min-height: 220px;
+            margin-bottom: 0 !important;
+        }
+
+        .accommodation-note .icon-box {
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .accommodation-note > div:last-child {
+            display: block;
+        }
+
+        .accommodation-note .label {
+            display: block;
+            max-width: 650px;
+            margin: 0;
+            color: #ffffff;
+            font-size: 1.35rem;
+            font-weight: 600;
+            line-height: 1.7;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+                
         .blue-separator {
             width: 100px;
             height: 4px;
@@ -1174,11 +1205,11 @@ $view->open([
         <div class="container">
             <div class="footer-inner">
                 <div class="row">
-                    <div class="col-xl-3 col-md-6">
+                    <div class="col-xl-4 col-md-6">
                         <div class="footer-widget">
                             <div class="footer-logo"><img src="assets/images/2026_ACC_TAC_Letterhead_1.png" alt="footer-logo">
                             </div>
-                            <p class="footer-text">Experience the Speed and Excitement of Track Asia Cup 2026, Where Champions Race for Glory!
+                            <p class="footer-text">Track Asia Cup 2026 — Experience the Speed and Excitement as Champions Race for Glory!
                             </p>
                             <div class="social-links">
                                 <!-- <a href="https://www.facebook.com/profile.php?id=100094321766590" class="platform"><i
@@ -1192,18 +1223,22 @@ $view->open([
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6 col-sm-6">
+                   <div class="col-xl-4 col-md-6 col-sm-6">
                         <div class="footer-widget">
-                            <h3 class="footer-widget-title"><span class="decorator"></span> ESSENTIAL LINKS</h3>
+                            <h3 class="footer-widget-title"><span class="decorator"></span> OUR PARTNERS</h3>
                             <ul class="widget-items cata-widget">
-                                <li class="widget-list-item"><a href="/about">ABOUT US</a></li>
-                                <!--  <li class="widget-list-item"><a href="/match-schedule">SCHEDULE</a></li> -->
-                                <li class="widget-list-item"><a href="/team">Technical Guide</a></li>
-                                <!--    <li class="widget-list-item"><a href="/league-standings">AWARDING</a></li>
+                                <li class="widget-list-item"><a href="https://www.uci.org/" target="_blank" rel="noopener noreferrer">Union Cycliste Internationale</a></li>
+                                <li class="widget-list-item"><a href="https://www.accasia.org/" target="_blank" rel="noopener noreferrer">Asian Cycling Confederation</a></li>
+                                <li class="widget-list-item"><a href="https://psc.gov.ph/" target="_blank" rel="noopener noreferrer">Philippine Sports Commission</a></li>
+                                <li class="widget-list-item"><a href="https://www.tagaytay.gov.ph//" target="_blank" rel="noopener noreferrer">Tagaytay City Government</a></li>
+                                <li class="widget-list-item"><a href="https://www.olympic.ph/" target="_blank" rel="noopener noreferrer">Philippine Olympic Committee</a></li>
+                                <li class="widget-list-item"><a href="https://www.facebook.com/philcycling/" target="_blank" rel="noopener noreferrer">Philcycling</a></li>
+                                <!-- <li class="widget-list-item"><a href="/about">ABOUT US</a></li>-->
+                                <!--   <li class="widget-list-item"><a href="/match-schedule">SCHEDULE</a></li> -->
+                                <!-- <li class="widget-list-item"><a href="/team">Technical Handbook</a></li>-->
+                                <!--  <li class="widget-list-item"><a href="/league-standings">AWARDING</a></li>
                                 <li class="widget-list-item"><a href="/gallery">GALLERY</a></li>
                                 <li class="widget-list-item"><a href="/contact">CONTACT</a></li> -->
-                                <!-- <li class="widget-list-item"><a href="/shop">PRICE TABLE</a></li> -->
-                                <!-- <li class="widget-list-item"><a href="/shop">SHOP</a></li> -->
                                 <!-- <li class="widget-list-item"><a href="/team">OUR PLAYERS</a></li> -->
                                 <!-- <li class="widget-list-item"><a href="/venue">ARENA</a></li> -->
                                 <!-- <li class="widget-list-item"><a href="/team-details">TEAM DETAILS</a></li> -->
@@ -1213,18 +1248,16 @@ $view->open([
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6">
+                    <div class="col-xl-4 col-md-6">
                         <div class="footer-widget address-widget">
                             <h3 class="footer-widget-title"><span class="decorator"></span> GET IN TOUCH</h3>
                             <ul>
-                                <li class="widget-list-item"><i class="fas fa-envelope-open"></i><a href="mailto:philcycling.offroad@gmail.com">philcycling@gmail.com</a>
-                                </li>
+                                <li class="widget-list-item"><i class="fas fa-envelope-open"></i><a href="mailto:philcycling.offroad@gmail.com">philcycling@gmail.com</a></li>
+                                <li class="widget-list-item"><i class="fab fa-facebook-f"></i><a href="https://www.facebook.com/philcycling/">Philcycling</a></li>
                                 <!-- <li class="widget-list-item"><i class="fas fa-phone"></i><a href="tel:09877788890">098
                                         777
                                         888 90</a></li> -->
-                                <li class="widget-list-item"><i class="fas fa-map-marker-alt"></i> <span>TAGAYTAY CITY
-                                VELODROME, <br> CITY SPORTS COMPLEX,<br>
-                                TAGAYTAY CITY</span></li>
+                                <li class="widget-list-item"><i class="fas fa-map-marker-alt"></i> <span>TAGAYTAY CT VELODROME, <br> CRISANTO M. DE LOS REYES AVE, TAGAYTAY CITY, CAVITE, 4120, PHILIPPINES <br></span></li>
                             </ul>
                         </div>
                     </div>

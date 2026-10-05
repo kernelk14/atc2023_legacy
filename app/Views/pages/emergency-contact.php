@@ -117,9 +117,12 @@ $view->open([
         
         @media (prefers-color-scheme: dark) {
              :root {
-                --bg: hsl(var(--hue), 90%, 10%);
+                --bg: hsl(var(--hue), 90%, 50%);
                 --fg: hsl(var(--hue), 90%, 90%);
             }
+        }
+            :root {
+            --primary: rgb(0, 36, 165);
         }
         /* Animations */
         
@@ -283,174 +286,6 @@ $view->open([
         }
     </style>
 
-
-',
-    'banner' => [
-        'title'  => 'EMERGENCY CONTACT',
-        'crumbs' => [
-            ['text' => 'CONTACT US', 'href' => '/contact', 'class' => 'dropdown-link', 'liClass' => 'dropdown-li'],
-            ['text' => 'EMERGENCY CONTACT', 'href' => '/emergency-contact', 'class' => 'dropdown-link', 'liClass' => 'dropdown-li']
-        ],
-    ],
-]);
-?>
-    </header>
-    <!--================= Header Section End Here =================-->
-
-
-    <!--================= Team Section Start Here =================-->
-    <!--<div class="rts-team-section inner section-gap">
-    <div class="container">
-        <div class="team-section-inner inner">
-            <!--<div class="row">
-                <div class="col-xl-3 col-md-4 col-sm-6">
-                    <div class="team-wraper">
-                        <div class="player-card">
-                            <a class="image" href="/team-details"><img src="assets/images/team/team01.png" alt=""></a>
-                            <div class="number">11</div>
-                            <ul class="social-area">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="profile">
-                            <p class="position">FORWARD</p>
-                            <a href="#" class="name">MAXIELS DAVID</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-4 col-sm-6">
-                    <div class="team-wraper">
-                        <div class="player-card">
-                            <a class="image" href="/team-details"><img src="assets/images/team/team02.png" alt=""></a>
-                            <div class="number">7</div>
-                            <ul class="social-area">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="profile">
-                            <p class="position">WINGER</p>
-                            <a href="#" class="name">VEN DIESEL</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-4 col-sm-6">
-                    <div class="team-wraper">
-                        <div class="player-card">
-                            <a class="image" href="/team-details"><img src="assets/images/team/team03.png" alt=""></a>
-                            <div class="number">9</div>
-                            <ul class="social-area">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="profile">
-                            <p class="position">WINGER</p>
-                            <a href="#" class="name">NED STARK</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-4 col-sm-6">
-                    <div class="team-wraper">
-                        <div class="player-card">
-                            <a class="image" href="/team-details"><img src="assets/images/team/team04.png" alt=""></a>
-                            <div class="number">10</div>
-                            <ul class="social-area">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="profile">
-                            <p class="position">MID-FIELDER</p>
-                            <a href="/team-details" class="name">JOHN WICK</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-4 col-sm-6">
-                    <div class="team-wraper">
-                        <div class="player-card">
-                            <a class="image" href="/team-details"><img src="assets/images/team/team05.png" alt=""></a>
-                            <div class="number">9</div>
-                            <ul class="social-area">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="profile">
-                            <p class="position">WINGER</p>
-                            <a href="/team-details" class="name">TYRION LENNISTER</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-4 col-sm-6">
-                    <div class="team-wraper">
-                        <div class="player-card">
-                            <a class="image" href="/team-details"><img src="assets/images/team/team06.png" alt=""></a>
-                            <div class="number">10</div>
-                            <ul class="social-area">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="profile">
-                            <p class="position">MID-FIELDER</p>
-                            <a href="/team-details" class="name">SAMWELL TARLY</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-4 col-sm-6">
-                    <div class="team-wraper">
-                        <div class="player-card">
-                            <a class="image" href="/team-details"><img src="assets/images/team/team07.png" alt=""></a>
-                            <div class="number">7</div>
-                            <ul class="social-area">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="profile">
-                            <p class="position">WINGER</p>
-                            <a href="/team-details" class="name">EURON GREYJOY</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-4 col-sm-6">
-                    <div class="team-wraper">
-                        <div class="player-card">
-                            <a class="image" href="/team-details"><img src="assets/images/team/team08.png" alt=""></a>
-                            <div class="number">11</div>
-                            <ul class="social-area">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="profile">
-                            <p class="position">FORWARD</p>
-                            <a href="/team-details" class="name">JOHN SNOW</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>-->
-    <!--================= Team Section End Here =================-->
-
-    <!--================= Additional 1 Section Start Here =================-->
-
-    <!-- MAIN CONTENT -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-
     <style>
         /* --- 1. GLOBAL RESET & TYPOGRAPHY --- */
         
@@ -469,7 +304,7 @@ $view->open([
         }
         
         .emergency-wrapper {
-            font-family: 'Inter', sans-serif;
+            font-family: "Inter", sans-serif;
             background-color: var(--bg-dark);
             color: var(--text-main);
             width: 100%;
@@ -663,7 +498,7 @@ $view->open([
         }
         
         .number-xl {
-            font-size: 1.1rem;
+            font-size: .8rem;
             font-weight: 700;
             color: #fff;
             letter-spacing: 0.5px;
@@ -768,15 +603,186 @@ $view->open([
         }
     </style>
 
+
+',
+    'banner' => [
+        'title'  => 'EMERGENCY CONTACT',
+        'crumbs' => [
+            ['text' => 'CONTACT US', 'href' => '/contact', 'class' => 'dropdown-link', 'liClass' => 'dropdown-li'],
+            ['text' => 'EMERGENCY CONTACT', 'href' => '/emergency-contact', 'class' => 'dropdown-link', 'liClass' => 'dropdown-li']
+        ],
+    ],
+]);
+?>
+    </header>
+    <!--================= Header Section End Here =================-->
+
+
+    <!--================= Team Section Start Here =================-->
+    <!--<div class="rts-team-section inner section-gap">
+    <div class="container">
+        <div class="team-section-inner inner">
+            <!--<div class="row">
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                    <div class="team-wraper">
+                        <div class="player-card">
+                            <a class="image" href="/team-details"><img src="assets/images/team/team01.png" alt=""></a>
+                            <div class="number">11</div>
+                            <ul class="social-area">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="profile">
+                            <p class="position">FORWARD</p>
+                            <a href="#" class="name">MAXIELS DAVID</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                    <div class="team-wraper">
+                        <div class="player-card">
+                            <a class="image" href="/team-details"><img src="assets/images/team/team02.png" alt=""></a>
+                            <div class="number">7</div>
+                            <ul class="social-area">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="profile">
+                            <p class="position">WINGER</p>
+                            <a href="#" class="name">VEN DIESEL</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                    <div class="team-wraper">
+                        <div class="player-card">
+                            <a class="image" href="/team-details"><img src="assets/images/team/team03.png" alt=""></a>
+                            <div class="number">9</div>
+                            <ul class="social-area">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="profile">
+                            <p class="position">WINGER</p>
+                            <a href="#" class="name">NED STARK</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                    <div class="team-wraper">
+                        <div class="player-card">
+                            <a class="image" href="/team-details"><img src="assets/images/team/team04.png" alt=""></a>
+                            <div class="number">10</div>
+                            <ul class="social-area">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="profile">
+                            <p class="position">MID-FIELDER</p>
+                            <a href="/team-details" class="name">JOHN WICK</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                    <div class="team-wraper">
+                        <div class="player-card">
+                            <a class="image" href="/team-details"><img src="assets/images/team/team05.png" alt=""></a>
+                            <div class="number">9</div>
+                            <ul class="social-area">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="profile">
+                            <p class="position">WINGER</p>
+                            <a href="/team-details" class="name">TYRION LENNISTER</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                    <div class="team-wraper">
+                        <div class="player-card">
+                            <a class="image" href="/team-details"><img src="assets/images/team/team06.png" alt=""></a>
+                            <div class="number">10</div>
+                            <ul class="social-area">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="profile">
+                            <p class="position">MID-FIELDER</p>
+                            <a href="/team-details" class="name">SAMWELL TARLY</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                    <div class="team-wraper">
+                        <div class="player-card">
+                            <a class="image" href="/team-details"><img src="assets/images/team/team07.png" alt=""></a>
+                            <div class="number">7</div>
+                            <ul class="social-area">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="profile">
+                            <p class="position">WINGER</p>
+                            <a href="/team-details" class="name">EURON GREYJOY</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                    <div class="team-wraper">
+                        <div class="player-card">
+                            <a class="image" href="/team-details"><img src="assets/images/team/team08.png" alt=""></a>
+                            <div class="number">11</div>
+                            <ul class="social-area">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="profile">
+                            <p class="position">FORWARD</p>
+                            <a href="/team-details" class="name">JOHN SNOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+    <!--================= Team Section End Here =================-->
+
+    <!--================= Additional 1 Section Start Here =================-->
+
+    <!-- MAIN CONTENT -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    
+
     <div class="emergency-wrapper">
         <div class="em-container">
 
             <aside class="em-sidebar">
                 <a href="#police" class="em-nav-item active"><i class="fas fa-shield-alt"></i> Police</a>
                 <a href="#fire" class="em-nav-item"><i class="fas fa-fire-extinguisher"></i> Fire Dept</a>
-                <a href="#drrmo" class="em-nav-item"><i class="fas fa-ambulance"></i> DRRMO</a>
+                <a href="#drrmo" class="em-nav-item"><i class="fas fa-ambulance"></i> CDRRMO</a>
                 <a href="#hospital" class="em-nav-item"><i class="fas fa-heartbeat"></i> Hospital</a>
-                <a href="#meralco" class="em-nav-item"><i class="fas fa-bolt"></i> Meralco</a>
+                <a href="#dfa" class="em-nav-item"><i class="fa-solid fa-passport"></i>DFA</a>
+                
             </aside>
 
             <main>
@@ -790,11 +796,11 @@ $view->open([
                         <div class="header-info">
                             <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
                             <div class="agency-name">
-                                <h2>Police Station</h2>
+                                <h2>Police</h2>
                                 <span>Crisanto M. De Los Reyes Ave.</span>
                             </div>
                         </div>
-                        <a href="https://goo.gl/maps/generic_police_link" target="_blank" class="map-link">
+                        <a href="https://maps.app.goo.gl/e4UPv3LsWsjS2gic8" target="_blank" rel="noopener noreferrer" class="map-link">
                             <i class="fas fa-map-marker-alt"></i> Directions
                         </a>
                     </div>
@@ -802,14 +808,14 @@ $view->open([
                         <div class="contact-box">
                             <a href="tel:09159137693" class="call-btn">
                                 <span class="label-sm">Globe Mobile</span>
-                                <span class="number-xl">0915 913 7693</span>
+                                <span class="number-xl">+63 915 913 7693</span>
                             </a>
                             <button class="copy-btn" onclick="copyText('09159137693')"><i class="far fa-copy"></i></button>
                         </div>
                         <div class="contact-box">
                             <a href="tel:09985985603" class="call-btn">
                                 <span class="label-sm">Smart Mobile</span>
-                                <span class="number-xl">0998 598 5603</span>
+                                <span class="number-xl">+63 998 598 5603</span>
                             </a>
                             <button class="copy-btn" onclick="copyText('09985985603')"><i class="far fa-copy"></i></button>
                         </div>
@@ -825,7 +831,7 @@ $view->open([
                                 <span>Foggy Heights Subdivision</span>
                             </div>
                         </div>
-                        <a href="https://goo.gl/maps/generic_fire_link" target="_blank" class="map-link">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Foggy+Heights+Subdivision,+Tagaytay+City,+Cavite,+Philippines" target="_blank" rel="noopener noreferrer" class="map-link">
                             <i class="fas fa-map-marker-alt"></i> Directions
                         </a>
                     </div>
@@ -833,14 +839,14 @@ $view->open([
                         <div class="contact-box">
                             <a href="tel:09429898495" class="call-btn">
                                 <span class="label-sm">Mobile Hotline</span>
-                                <span class="number-xl">0942 989 8495</span>
+                                <span class="number-xl">+63 942 989 8495</span>
                             </a>
                             <button class="copy-btn" onclick="copyText('09429898495')"><i class="far fa-copy"></i></button>
                         </div>
                         <div class="contact-box">
                             <a href="tel:0464831193" class="call-btn">
                                 <span class="label-sm">Landline</span>
-                                <span class="number-xl">(046) 483 1193</span>
+                                <span class="number-xl">(+6346) 483 1193</span>
                             </a>
                             <button class="copy-btn" onclick="copyText('0464831193')"><i class="far fa-copy"></i></button>
                         </div>
@@ -852,11 +858,11 @@ $view->open([
                         <div class="header-info">
                             <div class="card-icon"><i class="fas fa-hard-hat"></i></div>
                             <div class="agency-name">
-                                <h2>Tagaytay DRRMO</h2>
+                                <h2>Tagaytay CDRRMO</h2>
                                 <span>Calamba Road, Sungay West</span>
                             </div>
                         </div>
-                        <a href="https://goo.gl/maps/generic_drrmo_link" target="_blank" class="map-link">
+                        <a href="https://maps.app.goo.gl/o4UbTiq2ThVXXAm88" target="_blank" rel="noopener noreferrer" class="map-link">
                             <i class="fas fa-map-marker-alt"></i> Directions
                         </a>
                     </div>
@@ -864,14 +870,14 @@ $view->open([
                         <div class="contact-box">
                             <a href="tel:09167698367" class="call-btn">
                                 <span class="label-sm">Emergency Mobile</span>
-                                <span class="number-xl">0916 769 8367</span>
+                                <span class="number-xl">+63 916 769 8367</span>
                             </a>
                             <button class="copy-btn" onclick="copyText('09167698367')"><i class="far fa-copy"></i></button>
                         </div>
                         <div class="contact-box">
                             <a href="tel:0464830446" class="call-btn">
                                 <span class="label-sm">Landline</span>
-                                <span class="number-xl">(046) 483 0446</span>
+                                <span class="number-xl">(+6346) 483 0446</span>
                             </a>
                             <button class="copy-btn" onclick="copyText('0464830446')"><i class="far fa-copy"></i></button>
                         </div>
@@ -887,44 +893,55 @@ $view->open([
                                 <span>1315 E. Aguinaldo Highway</span>
                             </div>
                         </div>
-                        <a href="https://goo.gl/maps/generic_hospital_link" target="_blank" class="map-link">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Ospital+ng+Tagaytay,+1315+E.+Aguinaldo+Highway,+Tagaytay+City,+Cavite,+Philippines" target="_blank" rel="noopener noreferrer" class="map-link">
                             <i class="fas fa-map-marker-alt"></i> Directions
                         </a>
                     </div>
                     <div class="contact-grid">
                         <div class="contact-box">
                             <a href="tel:0468889510" class="call-btn">
-                                <span class="label-sm">Hospital Line</span>
-                                <span class="number-xl">(046) 888 9510</span>
+                                <span class="label-sm">Mobile Support</span>
+                                <span class="number-xl">(+6346) 888 9510</span>
                             </a>
-                            <button class="copy-btn" onclick="copyText('0468889510')"><i class="far fa-copy"></i></button>
+                            <button class="copy-btn" onclick="copyText('09560526290')"><i class="far fa-copy"></i></button>
                         </div>
                     </div>
                 </section>
 
-                <section id="meralco" class="agency-card">
+                <section id="dfa" class="agency-card">
                     <div class="card-header">
                         <div class="header-info">
-                            <div class="card-icon"><i class="fas fa-bolt"></i></div>
+                            <div class="card-icon"><i class="fa-solid fa-passport"></i></div>
                             <div class="agency-name">
-                                <h2>Meralco</h2>
-                                <span>Gen. Emilio Aguinaldo Highway</span>
+                                <h2 style="font-size: 25px;">Department of Foreign Affairs</h2>
+                                <span>Pasay City, Metro Manila 1300s</span>
                             </div>
                         </div>
-                        <a href="https://goo.gl/maps/generic_meralco_link" target="_blank" class="map-link">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Department+of+Foreign+Affairs,+2330+Roxas+Boulevard,+Pasay+City,+Metro+Manila,+Philippines" target="_blank" rel="noopener noreferrer" class="map-link">
                             <i class="fas fa-map-marker-alt"></i> Directions
                         </a>
                     </div>
                     <div class="contact-grid">
                         <div class="contact-box">
-                            <a href="tel:0464134100" class="call-btn">
-                                <span class="label-sm">Service Hotline</span>
-                                <span class="number-xl">(046) 413 4100</span>
+                            <a href="tel:0468889510" class="call-btn">
+                                <span class="label-sm">DFA Line</span>
+                                <span class="number-xl">+63 956 0526 290</span>
                             </a>
-                            <button class="copy-btn" onclick="copyText('0464134100')"><i class="far fa-copy"></i></button>
+                            <button class="copy-btn" onclick="copyText('0468889510')"><i class="far fa-copy"></i></button>
+                        </div>
+                        <div class="contact-box">
+                            <a href="tel:0464830446" class="call-btn">
+                                <span class="label-sm">Passport Client Concerns</span>
+                                <span class="number-xl">(+6302) 8834 4000</span>
+                            </a>
+                            <button class="copy-btn" onclick="copyText('00288344000')"><i class="far fa-copy"></i></button>
                         </div>
                     </div>
                 </section>
+
+                
+
+                
 
             </main>
         </div>
@@ -1304,11 +1321,11 @@ $view->open([
         <div class="container">
             <div class="footer-inner">
                 <div class="row">
-                    <div class="col-xl-3 col-md-6">
+                    <div class="col-xl-4 col-md-6">
                         <div class="footer-widget">
                             <div class="footer-logo"><img src="assets/images/2026_ACC_TAC_Letterhead_1.png" alt="footer-logo">
                             </div>
-                            <p class="footer-text">Experience the Speed and Excitement of Track Asia Cup 2026, Where Champions Race for Glory!
+                            <p class="footer-text">Track Asia Cup 2026 — Experience the Speed and Excitement as Champions Race for Glory!
                             </p>
                             <div class="social-links">
                                 <!-- <a href="https://www.facebook.com/profile.php?id=100094321766590" class="platform"><i
@@ -1322,18 +1339,22 @@ $view->open([
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6 col-sm-6">
+                    <div class="col-xl-4 col-md-6 col-sm-6">
                         <div class="footer-widget">
-                            <h3 class="footer-widget-title"><span class="decorator"></span> ESSENTIAL LINKS</h3>
+                            <h3 class="footer-widget-title"><span class="decorator"></span> OUR PARTNERS</h3>
                             <ul class="widget-items cata-widget">
-                                <li class="widget-list-item"><a href="/about">ABOUT US</a></li>
-                                <!--  <li class="widget-list-item"><a href="/match-schedule">SCHEDULE</a></li> -->
-                                <li class="widget-list-item"><a href="/team">Technical Guide</a></li>
-                                <!--    <li class="widget-list-item"><a href="/league-standings">AWARDING</a></li>
+                                <li class="widget-list-item"><a href="https://www.uci.org/" target="_blank" rel="noopener noreferrer">Union Cycliste Internationale</a></li>
+                                <li class="widget-list-item"><a href="https://www.accasia.org/" target="_blank" rel="noopener noreferrer">Asian Cycling Confederation</a></li>
+                                <li class="widget-list-item"><a href="https://psc.gov.ph/" target="_blank" rel="noopener noreferrer">Philippine Sports Commission</a></li>
+                                <li class="widget-list-item"><a href="https://www.tagaytay.gov.ph//" target="_blank" rel="noopener noreferrer">Tagaytay City Government</a></li>
+                                <li class="widget-list-item"><a href="https://www.olympic.ph/" target="_blank" rel="noopener noreferrer">Philippine Olympic Committee</a></li>
+                                <li class="widget-list-item"><a href="https://www.facebook.com/philcycling/" target="_blank" rel="noopener noreferrer">Philcycling</a></li>
+                                <!-- <li class="widget-list-item"><a href="/about">ABOUT US</a></li>-->
+                                <!--   <li class="widget-list-item"><a href="/match-schedule">SCHEDULE</a></li> -->
+                                <!-- <li class="widget-list-item"><a href="/team">Technical Handbook</a></li>-->
+                                <!--  <li class="widget-list-item"><a href="/league-standings">AWARDING</a></li>
                                 <li class="widget-list-item"><a href="/gallery">GALLERY</a></li>
                                 <li class="widget-list-item"><a href="/contact">CONTACT</a></li> -->
-                                <!-- <li class="widget-list-item"><a href="/shop">PRICE TABLE</a></li> -->
-                                <!-- <li class="widget-list-item"><a href="/shop">SHOP</a></li> -->
                                 <!-- <li class="widget-list-item"><a href="/team">OUR PLAYERS</a></li> -->
                                 <!-- <li class="widget-list-item"><a href="/venue">ARENA</a></li> -->
                                 <!-- <li class="widget-list-item"><a href="/team-details">TEAM DETAILS</a></li> -->
@@ -1343,18 +1364,16 @@ $view->open([
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6">
+                    <div class="col-xl-4 col-md-6">
                         <div class="footer-widget address-widget">
                             <h3 class="footer-widget-title"><span class="decorator"></span> GET IN TOUCH</h3>
                             <ul>
-                                <li class="widget-list-item"><i class="fas fa-envelope-open"></i><a href="mailto:philcycling.offroad@gmail.com">philcycling@gmail.com</a>
-                                </li>
+                                <li class="widget-list-item"><i class="fas fa-envelope-open"></i><a href="mailto:philcycling.offroad@gmail.com">philcycling@gmail.com</a></li>
+                                <li class="widget-list-item"><i class="fab fa-facebook-f"></i><a href="https://www.facebook.com/philcycling/">Philcycling</a></li>
                                 <!-- <li class="widget-list-item"><i class="fas fa-phone"></i><a href="tel:09877788890">098
                                         777
                                         888 90</a></li> -->
-                                <li class="widget-list-item"><i class="fas fa-map-marker-alt"></i> <span>TAGAYTAY CITY
-                                VELODROME, <br> CITY SPORTS COMPLEX,<br>
-                                TAGAYTAY CITY</span></li>
+                                <li class="widget-list-item"><i class="fas fa-map-marker-alt"></i> <span>TAGAYTAY CT VELODROME, <br> CRISANTO M. DE LOS REYES AVE, TAGAYTAY CITY, CAVITE, 4120, PHILIPPINES <br></span></li>
                             </ul>
                         </div>
                     </div>

@@ -848,38 +848,39 @@ $view->open([
         <div class="container">
             <div class="footer-inner">
                 <div class="row">
-                    <div class="col-xl-3 col-md-6">
+                    <div class="col-xl-4 col-md-6">
                         <div class="footer-widget">
                             <div class="footer-logo"><img src="assets/images/2026_ACC_TAC_Letterhead_1.png" alt="footer-logo">
                             </div>
-                            <p class="footer-text">Experience the Speed and Excitement of Track Asia Cup 2026, Where Champions Race for Glory!
+                            <p class="footer-text">Track Asia Cup 2026 — Experience the Speed and Excitement as Champions Race for Glory!
                             </p>
                             <div class="social-links">
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6 col-sm-6">
+                    <div class="col-xl-4 col-md-6 col-sm-6">
                         <div class="footer-widget">
-                            <h3 class="footer-widget-title"><span class="decorator"></span> ESSENTIAL LINKS</h3>
+                            <h3 class="footer-widget-title"><span class="decorator"></span> OUR PARTNERS</h3>
                             <ul class="widget-items cata-widget">
-                                <li class="widget-list-item"><a href="/about">ABOUT US</a></li>
-                                <!--  <li class="widget-list-item"><a href="/match-schedule">SCHEDULE</a></li> -->
-                                <li class="widget-list-item"><a href="/team">Technical Guide</a></li>
+                                <li class="widget-list-item"><a href="https://www.uci.org/" target="_blank" rel="noopener noreferrer">Union Cycliste Internationale</a></li>
+                                <li class="widget-list-item"><a href="https://www.accasia.org/" target="_blank" rel="noopener noreferrer">Asian Cycling Confederation</a></li>
+                                <li class="widget-list-item"><a href="https://psc.gov.ph/" target="_blank" rel="noopener noreferrer">Philippine Sports Commission</a></li>
+                                <li class="widget-list-item"><a href="https://www.tagaytay.gov.ph//" target="_blank" rel="noopener noreferrer">Tagaytay City Government</a></li>
+                                <li class="widget-list-item"><a href="https://www.olympic.ph/" target="_blank" rel="noopener noreferrer">Philippine Olympic Committee</a></li>
+                                <li class="widget-list-item"><a href="https://www.facebook.com/philcycling/" target="_blank" rel="noopener noreferrer">Philcycling</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6">
+                    <div class="col-xl-4 col-md-6">
                         <div class="footer-widget address-widget">
                             <h3 class="footer-widget-title"><span class="decorator"></span> GET IN TOUCH</h3>
                             <ul>
-                                <li class="widget-list-item"><i class="fas fa-envelope-open"></i><a href="mailto:philcycling.offroad@gmail.com">philcycling@gmail.com</a>
-                                </li>
+                                <li class="widget-list-item"><i class="fas fa-envelope-open"></i><a href="mailto:philcycling.offroad@gmail.com">philcycling@gmail.com</a></li>
+                                <li class="widget-list-item"><i class="fab fa-facebook-f"></i><a href="https://www.facebook.com/philcycling/">Philcycling</a></li>
                                 <!-- <li class="widget-list-item"><i class="fas fa-phone"></i><a href="tel:09877788890">098
                                         777
                                         888 90</a></li> -->
-                                <li class="widget-list-item"><i class="fas fa-map-marker-alt"></i> <span>TAGAYTAY CITY
-                                VELODROME, <br> CITY SPORTS COMPLEX,<br>
-                                TAGAYTAY CITY</span></li>
+                                <li class="widget-list-item"><i class="fas fa-map-marker-alt"></i> <span>TAGAYTAY CT VELODROME, <br> CRISANTO M. DE LOS REYES AVE, TAGAYTAY CITY, CAVITE, 4120, PHILIPPINES <br></span></li>
                             </ul>
                         </div>
                     </div>

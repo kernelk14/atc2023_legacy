@@ -261,27 +261,6 @@ $view->open([
             /* Para alam ng user na pwedeng i-click */
         }
     </style>
-',
-    'banner' => [
-        'title'  => 'START LIST & RESULT',
-        'crumbs' => [
-            ['text' => 'RACE INFO', 'href' => '/race-schedule', 'class' => 'dropdown-link', 'liClass' => 'dropdown-li'],
-            ['text' => 'START LIST & RESULT', 'href' => '/start-list', 'class' => 'dropdown-link', 'liClass' => 'dropdown-li']
-        ],
-    ],
-]);
-?>
-    </header>
-    <!--================= Header Section End Here =================-->
-
-
-    <!--================= Team Section Start Here =================-->
-
-    <!--================= Team Section End Here =================-->
-
-    <!--================= Additional 1 Section Start Here =================-->
-
-    <!-- MAIN CONTENT -->
 
     <style>
         /* --- CSS THEME FIX (Dark & Blue) --- */
@@ -439,14 +418,28 @@ $view->open([
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
     </style>
+',
+    'banner' => [
+        'title'  => 'START LIST & RESULT',
+        'crumbs' => [
+            ['text' => 'RACE INFO', 'href' => '/race-schedule', 'class' => 'dropdown-link', 'liClass' => 'dropdown-li'],
+            ['text' => 'START LIST & RESULT', 'href' => '/start-list', 'class' => 'dropdown-link', 'liClass' => 'dropdown-li']
+        ],
+    ],
+]);
+?>
+    </header>
+    <!--================= Header Section End Here =================-->
+
+    <!--=================  MAIN CONTENT =================-->
 
     <div class="results-section-dark">
         <div class="container">
 
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-8 text-center">
-                    <span style="color: #00B4D8; font-weight: 800; letter-spacing: 2px;">RACE HEADQUARTERS</span>
-                    <h2 class="venue-main-title mt-2">START LIST AND RESULT</h2>
+                    <span style="color: #00B4D8; font-weight: 800; letter-spacing: 2px;">RACE SECRETARIAT</span>
+                    <h2 class="venue-main-title mt-2">START LISTS AND RESULTS</h2>
                     <div class="blue-separator"></div>
                     <p class="venue-subtitle" style="color: #b0b0b0;">
                         Official documents for the Asian Track Championships 2026.
@@ -460,12 +453,12 @@ $view->open([
 
                         <div class="day-header">
                             <div>
-                                <h3 class="day-title">DAY 1 — MARCH 25, 2026</h3>
-                                <span class="day-subtitle">Qualifiers & Opening Ceremony</span>
+                                <h3 class="day-title">DAY 1 — 03 DECEMBER 2026</h3>
+                                <span class="day-subtitle">Confirmation of Starters</span>
                             </div>
 
                             <!-- para naman sa upcoming palang ang nakalagay SA DAY 1 -->
-                            <span class="status-badge status-upcoming">UPCOMING</span>
+                            <span class="status-badge status-upcoming">TBA</span>
                             <!-- end ng UPCOMING -->
 
                             <!-- PAG TAPOS NA ANG EVENT SA DAY 2 -->
@@ -480,8 +473,8 @@ $view->open([
                                     <i class="fas fa-list-ul"></i>
                                 </div>
                                 <div>
-                                    <span class="item-label">Official Start List</span>
-                                    <span class="item-sub">Ready for Download</span>
+                                    <span class="item-label">Confirmed Starters</span>
+                                    <span class="item-sub">Not Ready for Download</span>
                                 </div>
                             </div>
                             <a href="assets/downloads/day1-startlist.pdf" target="_blank" class="btn-venue-download">
@@ -489,7 +482,7 @@ $view->open([
                         </a>
                         </div>
 
-                        <div class="result-row">
+                       <!-- <div class="result-row">
                             <div class="d-flex align-items-center">
                                 <div class="icon-box-styled">
                                     <i class="fas fa-trophy"></i>
@@ -500,18 +493,18 @@ $view->open([
                                 </div>
                             </div>
 
-                            <!-- pag pending pa  muna ANG RESULT-->
+                            pag pending pa  muna ANG RESULT
                             <button class="btn-pending" disabled>
                             PENDING <i class="fas fa-clock ms-2"></i>
-                        </button>
-                            <!-- END NG PENDING -->
+                            </button>
+                            END NG PENDING 
 
-                            <!-- pag pwede na i enable ang download pdf ng day 1 result -->
+                             pag pwede na i enable ang download pdf ng day 1 result 
 
-                            <!--  <a href="assets/downloads/day1-results.pdf" target="_blank" class="btn-venue-download">
+                              <a href="assets/downloads/day1-results.pdf" target="_blank" class="btn-venue-download">
                                         DOWNLOAD PDF <i class="fas fa-download ms-2"></i>
-                                 </a> -->
-                        </div>
+                                 </a> 
+                        </div>-->
 
                     </div>
                 </div>
@@ -521,32 +514,116 @@ $view->open([
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="venue-info-card">
-                        <div class="day-header">
+
+                    <div class="day-header">
                             <div>
-                                <h3 class="day-title">DAY 2 — MARCH 26, 2026</h3>
-                                <span class="day-subtitle">Finals & Awarding</span>
+                                <h3 class="day-title">DAY 2 — 04 DECEMBER 2026</h3>
+                                <span class="day-subtitle">Race Proper</span>
                             </div>
 
-                            <!-- para naman sa upcoming palang ang nakalagay SA DAY 2 -->
-                            <span class="status-badge status-upcoming">UPCOMING</span>
+                            <!-- para naman sa upcoming palang ang nakalagay SA DAY 1 -->
+                            <span class="status-badge status-upcoming">TBA</span>
                             <!-- end ng UPCOMING -->
-
 
                             <!-- PAG TAPOS NA ANG EVENT SA DAY 2 -->
                             <!-- <span class="status-badge status-completed">COMPLETED</span> -->
-                            <!-- END NG EVENT SA DAY 2 -->
-                        </div>
-
-                        <!-- PAG ILOLOCK MUNA YUNG EVENT -->
-                        <div class="text-center py-4" style="color: #666;">
-                            <i class="fas fa-lock mb-3" style="font-size: 20px;"></i>
-                            <p style="margin: 0; font-size: 0.9rem;">Files locked until event starts.</p>
-                            <!-- END -->
+                            <!-- END NG EVENT SA DAY 1 -->
 
                         </div>
 
+                        <div class="result-row">
+                            <div class="d-flex align-items-center">
+                                <div class="icon-box-styled">
+                                    <i class="fas fa-list-ul"></i>
+                                </div>
+                                <div>
+                                    <span class="item-label">Start List</span>
+                                    <span class="item-sub">Not Ready for Download</span>
+                                </div>
+                            </div>
+                            <a href="assets/downloads/day1-startlist.pdf" target="_blank" class="btn-venue-download">
+                            DOWNLOAD PDF <i class="fas fa-download ms-2"></i>
+                        </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
 
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="venue-info-card">
 
+                    <div class="day-header">
+                            <div>
+                                <h3 class="day-title">DAY 3 — 05 DECEMBER 2026</h3>
+                                <span class="day-subtitle">Race Proper</span>
+                            </div>
+
+                            <!-- para naman sa upcoming palang ang nakalagay SA DAY 1 -->
+                            <span class="status-badge status-upcoming">TBA</span>
+                            <!-- end ng UPCOMING -->
+
+                            <!-- PAG TAPOS NA ANG EVENT SA DAY 2 -->
+                            <!-- <span class="status-badge status-completed">COMPLETED</span> -->
+                            <!-- END NG EVENT SA DAY 1 -->
+
+                        </div>
+
+                        <div class="result-row">
+                            <div class="d-flex align-items-center">
+                                <div class="icon-box-styled">
+                                    <i class="fas fa-list-ul"></i>
+                                </div>
+                                <div>
+                                    <span class="item-label">Start List</span>
+                                    <span class="item-sub">Not Ready for Download</span>
+                                </div>
+                            </div>
+                            <a href="assets/downloads/day1-startlist.pdf" target="_blank" class="btn-venue-download">
+                            DOWNLOAD PDF <i class="fas fa-download ms-2"></i>
+                        </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="venue-info-card">
+
+                    <div class="day-header">
+                            <div>
+                                <h3 class="day-title">DAY 4 — 06 DECEMBER 2026</h3>
+                                <span class="day-subtitle">Race Proper</span>
+                            </div>
+
+                            <!-- para naman sa upcoming palang ang nakalagay SA DAY 1 -->
+                            <span class="status-badge status-upcoming">TBA</span>
+                            <!-- end ng UPCOMING -->
+
+                            <!-- PAG TAPOS NA ANG EVENT SA DAY 2 -->
+                            <!-- <span class="status-badge status-completed">COMPLETED</span> -->
+                            <!-- END NG EVENT SA DAY 1 -->
+
+                        </div>
+
+                        <div class="result-row">
+                            <div class="d-flex align-items-center">
+                                <div class="icon-box-styled">
+                                    <i class="fas fa-list-ul"></i>
+                                </div>
+                                <div>
+                                    <span class="item-label">Start List</span>
+                                    <span class="item-sub">Not Ready for Download</span>
+                                </div>
+                            </div>
+                            <a href="assets/downloads/day1-startlist.pdf" target="_blank" class="btn-venue-download">
+                            DOWNLOAD PDF <i class="fas fa-download ms-2"></i>
+                        </a>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -1134,11 +1211,11 @@ $view->open([
         <div class="container">
             <div class="footer-inner">
                 <div class="row">
-                    <div class="col-xl-3 col-md-6">
+                    <div class="col-xl-4 col-md-6">
                         <div class="footer-widget">
                             <div class="footer-logo"><img src="assets/images/2026_ACC_TAC_Letterhead_1.png" alt="footer-logo">
                             </div>
-                            <p class="footer-text">Experience the Speed and Excitement of Track Asia Cup 2026, Where Champions Race for Glory!
+                            <p class="footer-text">Track Asia Cup 2026 — Experience the Speed and Excitement as Champions Race for Glory!
                             </p>
                             <div class="social-links">
                                 <!-- <a href="https://www.facebook.com/profile.php?id=100094321766590" class="platform"><i
@@ -1152,18 +1229,22 @@ $view->open([
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6 col-sm-6">
+                    <div class="col-xl-4 col-md-6 col-sm-6">
                         <div class="footer-widget">
-                            <h3 class="footer-widget-title"><span class="decorator"></span> ESSENTIAL LINKS</h3>
+                            <h3 class="footer-widget-title"><span class="decorator"></span> OUR PARTNERS</h3>
                             <ul class="widget-items cata-widget">
-                                <li class="widget-list-item"><a href="/about">ABOUT US</a></li>
-                                <!--  <li class="widget-list-item"><a href="/match-schedule">SCHEDULE</a></li> -->
-                                <li class="widget-list-item"><a href="/team">Technical Guide</a></li>
-                                <!--    <li class="widget-list-item"><a href="/league-standings">AWARDING</a></li>
+                                <li class="widget-list-item"><a href="https://www.uci.org/" target="_blank" rel="noopener noreferrer">Union Cycliste Internationale</a></li>
+                                <li class="widget-list-item"><a href="https://www.accasia.org/" target="_blank" rel="noopener noreferrer">Asian Cycling Confederation</a></li>
+                                <li class="widget-list-item"><a href="https://psc.gov.ph/" target="_blank" rel="noopener noreferrer">Philippine Sports Commission</a></li>
+                                <li class="widget-list-item"><a href="https://www.tagaytay.gov.ph//" target="_blank" rel="noopener noreferrer">Tagaytay City Government</a></li>
+                                <li class="widget-list-item"><a href="https://www.olympic.ph/" target="_blank" rel="noopener noreferrer">Philippine Olympic Committee</a></li>
+                                <li class="widget-list-item"><a href="https://www.facebook.com/philcycling/" target="_blank" rel="noopener noreferrer">Philcycling</a></li>
+                                <!-- <li class="widget-list-item"><a href="/about">ABOUT US</a></li>-->
+                                <!--   <li class="widget-list-item"><a href="/match-schedule">SCHEDULE</a></li> -->
+                                <!-- <li class="widget-list-item"><a href="/team">Technical Handbook</a></li>-->
+                                <!--  <li class="widget-list-item"><a href="/league-standings">AWARDING</a></li>
                                 <li class="widget-list-item"><a href="/gallery">GALLERY</a></li>
                                 <li class="widget-list-item"><a href="/contact">CONTACT</a></li> -->
-                                <!-- <li class="widget-list-item"><a href="/shop">PRICE TABLE</a></li> -->
-                                <!-- <li class="widget-list-item"><a href="/shop">SHOP</a></li> -->
                                 <!-- <li class="widget-list-item"><a href="/team">OUR PLAYERS</a></li> -->
                                 <!-- <li class="widget-list-item"><a href="/venue">ARENA</a></li> -->
                                 <!-- <li class="widget-list-item"><a href="/team-details">TEAM DETAILS</a></li> -->
@@ -1173,18 +1254,16 @@ $view->open([
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6">
+                    <div class="col-xl-4 col-md-6">
                         <div class="footer-widget address-widget">
                             <h3 class="footer-widget-title"><span class="decorator"></span> GET IN TOUCH</h3>
                             <ul>
-                                <li class="widget-list-item"><i class="fas fa-envelope-open"></i><a href="mailto:philcycling.offroad@gmail.com">philcycling@gmail.com</a>
-                                </li>
+                                <li class="widget-list-item"><i class="fas fa-envelope-open"></i><a href="mailto:philcycling.offroad@gmail.com">philcycling@gmail.com</a></li>
+                                <li class="widget-list-item"><i class="fab fa-facebook-f"></i><a href="https://www.facebook.com/philcycling/">Philcycling</a></li>
                                 <!-- <li class="widget-list-item"><i class="fas fa-phone"></i><a href="tel:09877788890">098
                                         777
                                         888 90</a></li> -->
-                                <li class="widget-list-item"><i class="fas fa-map-marker-alt"></i> <span>TAGAYTAY CITY
-                                VELODROME, <br> CITY SPORTS COMPLEX,<br>
-                                TAGAYTAY CITY</span></li>
+                                <li class="widget-list-item"><i class="fas fa-map-marker-alt"></i> <span>TAGAYTAY CT VELODROME, <br> CRISANTO M. DE LOS REYES AVE, TAGAYTAY CITY, CAVITE, 4120, PHILIPPINES <br></span></li>
                             </ul>
                         </div>
                     </div>

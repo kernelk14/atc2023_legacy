@@ -425,8 +425,8 @@ $view->open([
 
                             <div class="row justify-content-center" style="margin-top: 50px; margin-bottom: 50px;">
                                 <div class="col-12 text-center">
-                                    <a href="https://drive.google.com/uc?export=download&id=1qrQ1PIu_OTU74-WzdG4Qz5tftuY-AYPA" class="rts-btn btn-primary" style="padding: 15px 40px; font-size: 18px; border-radius: 5px; text-transform: uppercase; letter-spacing: 1px;">
-                                        <i class="fas fa-file-pdf" style="margin-right: 10px;"></i> Download Technical Handbook
+                                    <a href="https://drive.google.com/uc?export=download&id=19avInxgkc9mY7Lf6jh6T3z1uaZhdhe7x" class="rts-btn btn-primary" style="padding: 15px 40px; font-size: 18px; border-radius: 5px; text-transform: uppercase; letter-spacing: 1px;">
+                                        <i class="fas fa-file-pdf" style="margin-right: 10px;"></i> View Technical Handbook
                                     </a>
 
                                     <!-- <a href="assets/downloads/vicinity-map.pdf" target="_blank" class="rts-btn btn-primary" style="margin-left: 20px; padding: 15px 40px; font-size: 18px; border-radius: 5px; text-transform: uppercase; letter-spacing: 1px; background-color: #28a745; border-color: #28a745;">
@@ -439,21 +439,40 @@ $view->open([
                             </div>
 
                             <div class="container" style="padding-bottom: 50px;">
-                                <div class="row g-4">
+                                <div class="row g-4 justify-content-center">
                                     <div class="col-lg-6">
                                         <div style="background: #111; padding: 30px; border-left: 4px solid #007bff;">
-                                            <h4 style="color: #fff;">SPRINT & KEIRIN</h4>
-                                            <p style="color: #bbb; font-size: 14px;">
-                                                Explosive power meets tactics. Riders reach speeds of 70kph+ in a battle of cat and mouse.
-                                            </p>
+                                            <h4 style="color: #fff;">SPRINT</h4>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div style="background: #111; padding: 30px; border-left: 4px solid #dc3545;">
-                                            <h4 style="color: #fff;">PURSUIT & OMNIUM</h4>
-                                            <p style="color: #bbb; font-size: 14px;">
-                                                The ultimate test of stamina. Includes the 4-event Omnium and the precision-based Team Pursuit.
-                                            </p>
+                                            <h4 style="color: #fff;">KEIRIN</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div style="background: #111; padding: 30px; border-left: 4px solid #6610f2;">
+                                            <h4 style="color: #fff;">PURSUIT</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div style="background: #111; padding: 30px; border-left: 4px solid #20c997;">
+                                            <h4 style="color: #fff;">OMNIUM</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div style="background: #111; padding: 30px; border-left: 4px solid #e83e8c;">
+                                            <h4 style="color: #fff;">POINT RACE</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div style="background: #111; padding: 30px; border-left: 4px solid #fd7e14;">
+                                            <h4 style="color: #fff;">SCRATCH RACE </h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div style="background: #111; padding: 30px; border-left: 4px solid #ffc107;">
+                                            <h4 style="color: #fff;">1KM TIME TRIAL</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -723,11 +742,11 @@ $view->open([
         <div class="container">
             <div class="footer-inner">
                 <div class="row">
-                    <div class="col-xl-3 col-md-6">
+                    <div class="col-xl-4 col-md-6">
                         <div class="footer-widget">
                             <div class="footer-logo"><img src="assets/images/2026_ACC_TAC_Letterhead_1.png" alt="footer-logo">
                             </div>
-                            <p class="footer-text">Experience the Speed and Excitement of Track Asia Cup 2026, Where Champions Race for Glory!
+                            <p class="footer-text">Track Asia Cup 2026 — Experience the Speed and Excitement as Champions Race for Glory!
                             </p>
                             <div class="social-links">
                                 <!-- <a href="https://www.facebook.com/profile.php?id=100094321766590" class="platform"><i
@@ -741,18 +760,22 @@ $view->open([
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6 col-sm-6">
+                    <div class="col-xl-4 col-md-6 col-sm-6">
                         <div class="footer-widget">
                             <h3 class="footer-widget-title"><span class="decorator"></span> ESSENTIAL LINKS</h3>
                             <ul class="widget-items cata-widget">
-                                <li class="widget-list-item"><a href="/about">ABOUT US</a></li>
-                                <!--  <li class="widget-list-item"><a href="/match-schedule">SCHEDULE</a></li> -->
-                                <li class="widget-list-item"><a href="/team">Technical Guide</a></li>
-                                <!--    <li class="widget-list-item"><a href="/league-standings">AWARDING</a></li>
+                                <li class="widget-list-item"><a href="https://www.uci.org/" target="_blank" rel="noopener noreferrer">Union Cycliste Internationale</a></li>
+                                <li class="widget-list-item"><a href="https://www.accasia.org/" target="_blank" rel="noopener noreferrer">Asian Cycling Confederation</a></li>
+                                <li class="widget-list-item"><a href="https://psc.gov.ph/" target="_blank" rel="noopener noreferrer">Philippine Sports Commission</a></li>
+                                <li class="widget-list-item"><a href="https://www.tagaytay.gov.ph//" target="_blank" rel="noopener noreferrer">Tagaytay City Government</a></li>
+                                <li class="widget-list-item"><a href="https://www.olympic.ph/" target="_blank" rel="noopener noreferrer">Philippine Olympic Committee</a></li>
+                                <li class="widget-list-item"><a href="https://www.facebook.com/philcycling/" target="_blank" rel="noopener noreferrer">Philcycling</a></li>
+                                <!-- <li class="widget-list-item"><a href="/about">ABOUT US</a></li>-->
+                                <!--   <li class="widget-list-item"><a href="/match-schedule">SCHEDULE</a></li> -->
+                                <!-- <li class="widget-list-item"><a href="/team">Technical Handbook</a></li>-->
+                                <!--  <li class="widget-list-item"><a href="/league-standings">AWARDING</a></li>
                                 <li class="widget-list-item"><a href="/gallery">GALLERY</a></li>
                                 <li class="widget-list-item"><a href="/contact">CONTACT</a></li> -->
-                                <!-- <li class="widget-list-item"><a href="/shop">PRICE TABLE</a></li> -->
-                                <!-- <li class="widget-list-item"><a href="/shop">SHOP</a></li> -->
                                 <!-- <li class="widget-list-item"><a href="/team">OUR PLAYERS</a></li> -->
                                 <!-- <li class="widget-list-item"><a href="/venue">ARENA</a></li> -->
                                 <!-- <li class="widget-list-item"><a href="/team-details">TEAM DETAILS</a></li> -->
@@ -762,18 +785,17 @@ $view->open([
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6">
+                    <div class="col-xl-4 col-md-6">
                         <div class="footer-widget address-widget">
                             <h3 class="footer-widget-title"><span class="decorator"></span> GET IN TOUCH</h3>
                             <ul>
-                                <li class="widget-list-item"><i class="fas fa-envelope-open"></i><a href="mailto:philcycling.offroad@gmail.com">philcycling@gmail.com</a>
-                                </li>
+                                <li class="widget-list-item"><i class="fas fa-envelope-open"></i><a href="mailto:philcycling.offroad@gmail.com">philcycling@gmail.com</a></li>
+                                <li class="widget-list-item"><i class="fab fa-facebook-f"></i><a href="https://www.facebook.com/philcycling/">Philcycling</a></li>
+                                
                                 <!-- <li class="widget-list-item"><i class="fas fa-phone"></i><a href="tel:09877788890">098
                                         777
                                         888 90</a></li> -->
-                                <li class="widget-list-item"><i class="fas fa-map-marker-alt"></i> <span>TAGAYTAY CITY
-                                VELODROME, <br> CITY SPORTS COMPLEX,<br>
-                                TAGAYTAY CITY</span></li>
+                                <li class="widget-list-item"><i class="fas fa-map-marker-alt"></i> <span>TAGAYTAY CT VELODROME, <br> CRISANTO M. DE LOS REYES AVE, TAGAYTAY CITY, CAVITE, 4120, PHILIPPINES <br></span></li>
                             </ul>
                         </div>
                     </div>

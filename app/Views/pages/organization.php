@@ -261,6 +261,361 @@ $view->open([
             /* Para alam ng user na pwedeng i-click */
         }
     </style>
+
+    <style>
+        /* --- PH THEME COLORS --- */
+        
+            :root {
+            --ph-blue: #0038A8;
+            --ph-red: #CE1126;
+            --ph-yellow: #FCD116;
+            --ph-white: #FFFFFF;
+        }
+        /* --- BACKGROUND ANIMATIONS --- */
+        
+        .bg-grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.2;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .tech-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            opacity: 0.45;
+            z-index: 0;
+            animation: floatOrb 12s infinite alternate;
+        }
+        /* The Flag Colors Positioning */
+        
+        .orb-blue {
+            width: 600px;
+            height: 600px;
+            background: var(--ph-blue);
+            top: -150px;
+            left: -100px;
+            /* Top Left */
+        }
+        
+        .orb-red {
+            width: 600px;
+            height: 600px;
+            background: var(--ph-red);
+            bottom: -150px;
+            right: -100px;
+            /* Bottom Right */
+            animation-delay: 2s;
+        }
+        
+        .orb-sun {
+            width: 400px;
+            height: 400px;
+            background: var(--ph-yellow);
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            /* Behind President */
+            opacity: 0.3;
+            filter: blur(100px);
+        }
+        
+        @keyframes floatOrb {
+            from {
+                transform: translate(0, 0) scale(1);
+            }
+            to {
+                transform: translate(30px, 30px) scale(1.1);
+            }
+        }
+        /* --- TYPOGRAPHY --- */
+        
+        .title-badge {
+            font-weight: 800;
+            letter-spacing: 3px;
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px 20px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+        
+        .main-title {
+            color: #fff;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            letter-spacing: -1px;
+            margin-bottom: 15px;
+        }
+        
+        .sub-text {
+            color: #aaa;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .separator-line {
+            width: 180px;
+            height: 3px;
+            margin: 30px auto 0;
+            border-radius: 2px;
+            /* Blue to Red Gradient na may Fade sa dulo */
+            background: linear-gradient(90deg, transparent, #0038A8, #CE1126, transparent);
+            opacity: 0.7;
+        }
+        /* --- TREE STRUCTURE --- */
+        
+        .org-tree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 80px;
+        }
+        
+        .org-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            position: relative;
+            width: 100%;
+            perspective: 1000px;
+        }
+        /* Connecting Lines - White/Gray for neutrality */
+        
+        .org-row:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            bottom: -80px;
+            left: 50%;
+            width: 2px;
+            height: 80px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+            transform: translateX(-50%);
+            z-index: 0;
+            
+        }
+        
+        .split-branch {
+            position: relative;
+            margin-top: 20px;
+        }
+        
+        .split-branch::before {
+            content: "";
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 320px;
+            height: 40px;
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+            border-left: 2px solid rgba(255, 255, 255, 0.2);
+            border-right: 2px solid rgba(255, 255, 255, 0.2);
+            z-index: 0;
+        }
+        /* --- CARD DESIGN --- */
+        
+        .org-card {
+            position: relative;
+            width: 300px;
+            padding: 40px 25px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        /* Shine Effect */
+        
+        .org-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transform: skewX(-25deg);
+            transition: 0.5s;
+            pointer-events: none;
+        }
+        
+        .org-card:hover::before {
+            left: 150%;
+        }
+        
+        .org-card:hover {
+            transform: translateY(-15px);
+            background: rgba(40, 40, 55, 0.6);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+        }
+        /* Image Container */
+        
+        .org-img-wrap {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 25px;
+            position: relative;
+            border-radius: 50%;
+            padding: 5px;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), transparent);
+            overflow: hidden;
+        }
+        /* !!! THE FIX IS HERE (center top) !!! */
+        
+        .org-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            /* NAKA-CENTER TOP NA */
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.5s ease;
+        }
+        
+        .org-card:hover .org-img-wrap img {
+            transform: scale(1.1);
+        }
+        /* Text */
+        
+        .name {
+            font-size: 20px;
+            font-weight: 800;
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+        
+        .role {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            display: block;
+        }
+        /* --- RANK THEMES (Flag Colors) --- */
+        /* PRESIDENT = SUN (Yellow/Gold) */
+        
+        .boss-card {
+            border-color: rgba(252, 209, 22, 0.4);
+            width: 360px;
+            background: linear-gradient(180deg, rgba(30, 30, 40, 0.8), rgba(20, 20, 10, 0.9));
+        }
+        
+        .boss-card .org-img-wrap {
+            border: 2px solid var(--ph-yellow);
+            box-shadow: 0 0 20px rgba(252, 209, 22, 0.2);
+        }
+        
+        .boss-card .name {
+            font-size: 26px;
+            color: var(--ph-yellow);
+        }
+        
+        .boss-card .role {
+            color: #fff;
+            opacity: 0.9;
+        }
+        
+        .boss-card:hover {
+            border-color: var(--ph-yellow);
+            box-shadow: 0 30px 80px rgba(252, 209, 22, 0.15);
+        }
+        /* VPs/Congress/Mayors = BLUE (Peace/Justice) */
+        
+        .vip-card .org-img-wrap {
+            border-color: rgba(0, 56, 168, 0.3);
+        }
+        
+        .vip-card .role {
+            color: #4dabf7;
+        }
+        
+        .vip-card:hover {
+            border-color: var(--ph-blue);
+            box-shadow: 0 20px 50px rgba(0, 56, 168, 0.2);
+        }
+        
+        .vip-card:hover .org-img-wrap {
+            border-color: var(--ph-blue);
+        }
+        /* DIRECTORS = RED (Valor/Action) */
+        
+        .dir-card .org-img-wrap {
+            border-color: rgba(206, 17, 38, 0.3);
+        }
+        
+        .dir-card .role {
+            color: #ff6b6b;
+        }
+        
+        .dir-card:hover {
+            border-color: var(--ph-red);
+            box-shadow: 0 20px 50px rgba(206, 17, 38, 0.2);
+        }
+        
+        .dir-card:hover .org-img-wrap {
+            border-color: var(--ph-red);
+        }
+        /* TD Special - White/Neutral */
+        
+        .td-card {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .td-card .role {
+            color: var(--ph-yellow);
+            font-weight: bold;
+        }
+        /* Mobile Fix */
+        /* --- MOBILE FIX (UPDATED) --- */
+        
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2rem;
+                line-height: 1.1;
+            }
+            .org-tree {
+                gap: 40px;
+            }
+            .org-row:not(:last-child)::after,
+            .split-branch::before {
+                display: none;
+            }
+            /* Force fit sa screen ang mga cards */
+            .org-card,
+            .boss-card,
+            .td-card {
+                width: 100% !important;
+                max-width: 320px !important;
+                margin: 0 auto;
+            }
+            .tech-orb {
+                opacity: 0.3;
+            }
+        }
+    </style>
 ',
     'banner' => [
         'title'  => 'ABOUT THE ORGANIZATION',
@@ -306,359 +661,7 @@ $view->open([
                 </div>
             </div>
 
-            <style>
-                /* --- PH THEME COLORS --- */
-                
-                 :root {
-                    --ph-blue: #0038A8;
-                    --ph-red: #CE1126;
-                    --ph-yellow: #FCD116;
-                    --ph-white: #FFFFFF;
-                }
-                /* --- BACKGROUND ANIMATIONS --- */
-                
-                .bg-grid-overlay {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-                    background-size: 50px 50px;
-                    opacity: 0.2;
-                    pointer-events: none;
-                    z-index: 1;
-                }
-                
-                .tech-orb {
-                    position: absolute;
-                    border-radius: 50%;
-                    filter: blur(90px);
-                    opacity: 0.45;
-                    z-index: 0;
-                    animation: floatOrb 12s infinite alternate;
-                }
-                /* The Flag Colors Positioning */
-                
-                .orb-blue {
-                    width: 600px;
-                    height: 600px;
-                    background: var(--ph-blue);
-                    top: -150px;
-                    left: -100px;
-                    /* Top Left */
-                }
-                
-                .orb-red {
-                    width: 600px;
-                    height: 600px;
-                    background: var(--ph-red);
-                    bottom: -150px;
-                    right: -100px;
-                    /* Bottom Right */
-                    animation-delay: 2s;
-                }
-                
-                .orb-sun {
-                    width: 400px;
-                    height: 400px;
-                    background: var(--ph-yellow);
-                    top: 15%;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    /* Behind President */
-                    opacity: 0.3;
-                    filter: blur(100px);
-                }
-                
-                @keyframes floatOrb {
-                    from {
-                        transform: translate(0, 0) scale(1);
-                    }
-                    to {
-                        transform: translate(30px, 30px) scale(1.1);
-                    }
-                }
-                /* --- TYPOGRAPHY --- */
-                
-                .title-badge {
-                    font-weight: 800;
-                    letter-spacing: 3px;
-                    font-size: 14px;
-                    text-transform: uppercase;
-                    margin-bottom: 15px;
-                    display: inline-block;
-                    background: rgba(255, 255, 255, 0.05);
-                    padding: 8px 20px;
-                    border-radius: 50px;
-                    border: 1px solid rgba(255, 255, 255, 0.1);
-                    color: #fff;
-                }
-                
-                .main-title {
-                    color: #fff;
-                    font-size: 3.5rem;
-                    text-transform: uppercase;
-                    font-weight: 800;
-                    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-                    letter-spacing: -1px;
-                    margin-bottom: 15px;
-                }
-                
-                .sub-text {
-                    color: #aaa;
-                    font-size: 1.1rem;
-                    max-width: 600px;
-                    margin: 0 auto;
-                }
-                
-                .separator-line {
-                    width: 180px;
-                    height: 3px;
-                    margin: 30px auto 0;
-                    border-radius: 2px;
-                    /* Blue to Red Gradient na may Fade sa dulo */
-                    background: linear-gradient(90deg, transparent, #0038A8, #CE1126, transparent);
-                    opacity: 0.7;
-                }
-                /* --- TREE STRUCTURE --- */
-                
-                .org-tree {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 80px;
-                }
-                
-                .org-row {
-                    display: flex;
-                    justify-content: center;
-                    flex-wrap: wrap;
-                    gap: 30px;
-                    position: relative;
-                    width: 100%;
-                    perspective: 1000px;
-                }
-                /* Connecting Lines - White/Gray for neutrality */
-                
-                .org-row:not(:last-child)::after {
-                    content: '';
-                    position: absolute;
-                    bottom: -80px;
-                    left: 50%;
-                    width: 2px;
-                    height: 80px;
-                    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
-                    transform: translateX(-50%);
-                    z-index: 0;
-                }
-                
-                .split-branch {
-                    position: relative;
-                    margin-top: 20px;
-                }
-                
-                .split-branch::before {
-                    content: '';
-                    position: absolute;
-                    top: -40px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 320px;
-                    height: 40px;
-                    border-top: 2px solid rgba(255, 255, 255, 0.2);
-                    border-left: 2px solid rgba(255, 255, 255, 0.2);
-                    border-right: 2px solid rgba(255, 255, 255, 0.2);
-                    z-index: 0;
-                }
-                /* --- CARD DESIGN --- */
-                
-                .org-card {
-                    position: relative;
-                    width: 300px;
-                    padding: 40px 25px;
-                    background: rgba(255, 255, 255, 0.03);
-                    backdrop-filter: blur(15px);
-                    -webkit-backdrop-filter: blur(15px);
-                    border: 1px solid rgba(255, 255, 255, 0.1);
-                    border-radius: 20px;
-                    text-align: center;
-                    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-                    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-                    overflow: hidden;
-                }
-                /* Shine Effect */
-                
-                .org-card::before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: -100%;
-                    width: 50%;
-                    height: 100%;
-                    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.05), transparent);
-                    transform: skewX(-25deg);
-                    transition: 0.5s;
-                    pointer-events: none;
-                }
-                
-                .org-card:hover::before {
-                    left: 150%;
-                }
-                
-                .org-card:hover {
-                    transform: translateY(-15px);
-                    background: rgba(40, 40, 55, 0.6);
-                    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
-                }
-                /* Image Container */
-                
-                .org-img-wrap {
-                    width: 130px;
-                    height: 130px;
-                    margin: 0 auto 25px;
-                    position: relative;
-                    border-radius: 50%;
-                    padding: 5px;
-                    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), transparent);
-                    overflow: hidden;
-                }
-                /* !!! THE FIX IS HERE (center top) !!! */
-                
-                .org-img-wrap img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: center top;
-                    /* NAKA-CENTER TOP NA */
-                    border-radius: 50%;
-                    border: 3px solid rgba(255, 255, 255, 0.1);
-                    transition: transform 0.5s ease;
-                }
-                
-                .org-card:hover .org-img-wrap img {
-                    transform: scale(1.1);
-                }
-                /* Text */
-                
-                .name {
-                    font-size: 20px;
-                    font-weight: 800;
-                    color: #fff;
-                    text-transform: uppercase;
-                    margin-bottom: 8px;
-                    line-height: 1.2;
-                }
-                
-                .role {
-                    font-size: 13px;
-                    font-weight: 600;
-                    text-transform: uppercase;
-                    letter-spacing: 1.5px;
-                    display: block;
-                }
-                /* --- RANK THEMES (Flag Colors) --- */
-                /* PRESIDENT = SUN (Yellow/Gold) */
-                
-                .boss-card {
-                    border-color: rgba(252, 209, 22, 0.4);
-                    width: 360px;
-                    background: linear-gradient(180deg, rgba(30, 30, 40, 0.8), rgba(20, 20, 10, 0.9));
-                }
-                
-                .boss-card .org-img-wrap {
-                    border: 2px solid var(--ph-yellow);
-                    box-shadow: 0 0 20px rgba(252, 209, 22, 0.2);
-                }
-                
-                .boss-card .name {
-                    font-size: 26px;
-                    color: var(--ph-yellow);
-                }
-                
-                .boss-card .role {
-                    color: #fff;
-                    opacity: 0.9;
-                }
-                
-                .boss-card:hover {
-                    border-color: var(--ph-yellow);
-                    box-shadow: 0 30px 80px rgba(252, 209, 22, 0.15);
-                }
-                /* VPs/Congress/Mayors = BLUE (Peace/Justice) */
-                
-                .vip-card .org-img-wrap {
-                    border-color: rgba(0, 56, 168, 0.3);
-                }
-                
-                .vip-card .role {
-                    color: #4dabf7;
-                }
-                
-                .vip-card:hover {
-                    border-color: var(--ph-blue);
-                    box-shadow: 0 20px 50px rgba(0, 56, 168, 0.2);
-                }
-                
-                .vip-card:hover .org-img-wrap {
-                    border-color: var(--ph-blue);
-                }
-                /* DIRECTORS = RED (Valor/Action) */
-                
-                .dir-card .org-img-wrap {
-                    border-color: rgba(206, 17, 38, 0.3);
-                }
-                
-                .dir-card .role {
-                    color: #ff6b6b;
-                }
-                
-                .dir-card:hover {
-                    border-color: var(--ph-red);
-                    box-shadow: 0 20px 50px rgba(206, 17, 38, 0.2);
-                }
-                
-                .dir-card:hover .org-img-wrap {
-                    border-color: var(--ph-red);
-                }
-                /* TD Special - White/Neutral */
-                
-                .td-card {
-                    border: 1px solid rgba(255, 255, 255, 0.2);
-                }
-                
-                .td-card .role {
-                    color: var(--ph-yellow);
-                    font-weight: bold;
-                }
-                /* Mobile Fix */
-                /* --- MOBILE FIX (UPDATED) --- */
-                
-                @media (max-width: 768px) {
-                    .main-title {
-                        font-size: 2rem;
-                        line-height: 1.1;
-                    }
-                    .org-tree {
-                        gap: 40px;
-                    }
-                    .org-row:not(:last-child)::after,
-                    .split-branch::before {
-                        display: none;
-                    }
-                    /* Force fit sa screen ang mga cards */
-                    .org-card,
-                    .boss-card,
-                    .td-card {
-                        width: 100% !important;
-                        max-width: 320px !important;
-                        margin: 0 auto;
-                    }
-                    .tech-orb {
-                        opacity: 0.3;
-                    }
-                }
-            </style>
+            
 
             <div class="org-tree">
 
@@ -779,16 +782,7 @@ $view->open([
                         <span class="role">Asst. Tournament Director</span>
                         <small style="color:#ff6b6b; font-size:11px; display:block; margin-top:4px;">Sporting Control</small>
                     </div> -->
-                    <div class="org-card dir-card" data-aos="fade-up" data-aos-delay="1100">
-                        <div class="org-img-wrap">
-                            <img src="assets/images/organization/adrian-caraan.jpg" alt="Adrian Caraan" loading="lazy">
-                        </div>
-                        <h4 class="name">Adrian M. Caraan</h4>
-                        <span class="role">Director</span>
-                        <small style="color:#bbb; font-size:11px; display:block; margin-top:4px;">Venue & Logistics</small>
-                    </div>
                 </div>
-
             </div>
         </div>
     </div>

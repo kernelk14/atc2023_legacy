@@ -261,6 +261,90 @@ $view->open([
             /* Para alam ng user na pwedeng i-click */
         }
     </style>
+
+    <style>
+        /* --- LIGHTBOX (POPUP) STYLE --- */
+        
+        .gallery-card img {
+            cursor: pointer;
+            transition: transform 0.4s ease, filter 0.3s ease;
+        }
+        
+        .gallery-card:hover img {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+        /* Black Background Overlay */
+        
+        #lightbox-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(5, 5, 5, 0.95);
+            backdrop-filter: blur(5px);
+        }
+        /* Zoomed Image */
+        
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            width: auto;
+            max-width: 90%;
+            max-height: 85vh;
+            border: 2px solid #C5A059;
+            /* Gold Border */
+            box-shadow: 0 0 50px rgba(197, 160, 89, 0.2);
+            animation: zoomIn 0.4s;
+        }
+        
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        /* Close Button */
+        
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: #C5A059;
+            font-size: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+            font-family: sans-serif;
+        }
+        
+        .close-btn:hover {
+            color: #fff;
+            text-shadow: 0 0 10px #C5A059;
+        }
+        /* Caption */
+        
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            font-family: "Manrope", sans-serif;
+            letter-spacing: 2px;
+            font-size: 1.1rem;
+        }
+    </style>
 ',
     'banner' => [
         'title'  => 'ABOUT THE COMPETITION',
@@ -291,15 +375,10 @@ $view->open([
                     Official Press Release
                 </span>
                     <h2 class="title" style="color: #fff; font-size: 48px; font-weight: 800; text-transform: uppercase; line-height: 1.1; margin-bottom: 30px;">
-                        12 nations and counting for Asian track championships in Tagaytay CT Velodrome
+                        12 nations and counting for Track Asia Cup in Tagaytay CT Velodrome
                     </h2>
 
-                    <div style="background: rgba(255,255,255,0.05); border-left: 4px solid #007bff; padding: 20px; text-align: left; margin: 0 auto; max-width: 800px; border-radius: 0 10px 10px 0;">
-                        <p style="font-size: 16px; color: #aab; margin: 0; font-style: italic;">
-                            <i class="fas fa-camera" style="margin-right: 10px;"></i> PHILIPPINE Olympic Committee and PhilCycling president Abraham “Bambol” Tolentino and Asian Cycling Confederation head Dato' Amarjit Singh Gill lead the inauguration
-                            of the Tagaytay City CT Velodrome in June last year. POC Photo
-                        </p>
-                    </div>
+                    
                 </div>
             </div>
 
@@ -318,7 +397,7 @@ $view->open([
                             }
                         </style>
                         <p class="drop-cap" style="font-size: 19px; line-height: 1.8; color: #fff;">
-                            THE 45th Asian Cycling Confederation (ACC) Track Championships returns to the Philippines after 31 years at the new Tagaytay City CT Velodrome with 12 nations confirming their participation for the March 25 to 31 competitions.
+                            THE Union Cycliste Internationale (UCI) lists the next leg of the ACC Track Asia Cup as taking place from December 4–6, 2026, at the Tagaytay CT Velodrome in Cavite, Philippines.
                         </p>
                     </div>
 
@@ -326,14 +405,13 @@ $view->open([
                         <i class="fas fa-quote-left" style="position: absolute; top: 0; left: 0; font-size: 40px; color: rgba(255,255,255,0.1);"></i>
 
                         <p style="font-size: 20px; color: #fff; font-weight: 300; margin-left: 50px; margin-bottom: 25px;">
-                            “It’s been three decades since the country hosted the Asian track championships—1995 to be exact at the then Amoranto Velodrome in Quezon City,” said Philippine Olympic Committee (POC) president Abraham “Bambol” Tolentino, who also heads cycling’s national
-                            federation, PhilCycling.
+                            “It has been three decades since the country last hosted the Asian Track Championships—1995, to be exact—at the then Amoranto Velodrome in Quezon City,” said Philippine Olympic Committee (POC) President Abraham “Bambol” N. Tolentino, who also serves as president of the Integrated Cycling Federation of the Philippines (PHILCYCLING).
                         </p>
 
-                        <p style="font-size: 20px; color: #fff; font-weight: 300; margin-left: 50px; font-style: italic;">
+                        <!--<p style="font-size: 20px; color: #fff; font-weight: 300; margin-left: 50px; font-style: italic;">
                             “With at least 12 nations confirming their attendance and more than 200 athletes competing as of today [Thursday, January 8] at the brand-new and International Cycling Union (UCI)-standard velodrome, the POC, PhilCycling and Tagaytay City will be rolling
                             out the red carpet as we aim for an excellent hosting of the event.
-                        </p>
+                        </p>-->
                     </div>
 
                     <hr style="border-color: rgba(255,255,255,0.1); margin-bottom: 40px;">
@@ -342,20 +420,25 @@ $view->open([
                         <h4 style="color: #fff; text-transform: uppercase; font-size: 20px; margin-bottom: 20px;">Race Categories & Support</h4>
 
                         <p style="margin-bottom: 20px;">
-                            Tagaytay City Mayor Aizack Brent Tolentino guaranteed the city’s full support to the championships which features competitions in men and women sprint, keirin, 1-kilometer time trial, team sprint, individual and team pursuit, points race, scratch, omnium,
-                            Madison and elimination race.
-                        </p>
-
-                        <p style="margin-bottom: 20px;">
-                            To be held simultaneously in the event fully supported by the Philippine Sports Commission headed by Patrick “Patò” Gregorio are the 14th Asian Para Track Cycling Championships in the 1-km time trial, individual pursuit, sprint, elimination and scratch
-                            races in six events both for men and women.
+                            Philippine Sports Commission headed by Patrick “Patò” Gregorio and Tagaytay City Mayor Aizack Brent Tolentino guaranteed the city’s full support to the races which features competitions in men and women sprint, keirin, 1-kilometer time trial, team sprint, individual and team pursuit, points race, scratch, omnium.
                         </p>
                     </div>
 
                     <div style="background: #111125; padding: 30px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.05);">
                         <h5 style="color: #007bff; margin-bottom: 15px;">Historical Context</h5>
+
                         <p style="font-size: 16px; margin-bottom: 15px;">
-                            Tolentino and Asian Cycling Confederation head Dato' Amarjit Singh Gill led the inauguration of the velodrome in June last year.
+                            THE 45th Asian Cycling Confederation (ACC) Track Cycling Championships and the 14th Asian Para Track Cycling Championships were held from March 25 to 31, 2026, at the Tagaytay CT Velodrome in Cavite, Philippines.
+                        </p>
+
+                        <p style="font-size: 16px; margin-bottom: 15px; margin-left: 30px;">
+                            “It has been three decades since the country last hosted the Asian Track Championships—1995, to be exact—at the then Amoranto Velodrome in Quezon City,” said Philippine Olympic Committee (POC) President Abraham “Bambol” N. Tolentino, who also serves as president of the Integrated Cycling Federation of the Philippines (PHILCYCLING).
+                        </p>
+
+
+                        <p style="font-size: 16px; margin-bottom: 15px;">
+                            ASIAN Cycling Confederation head Dato' Amarjit Singh Gill and Philippine Olympic Committee and PhilCycling president Abraham “Bambol” Tolentino lead the inauguration
+                            of the Tagaytay CT Velodrome in June 2025.
                         </p>
                         <p style="font-size: 16px; margin-bottom: 15px;">
                             Only 12 countries in Asia have velodromes with Tagaytay City being recognized as the newest indoor and wood facility that vies as a track cycling epicenter for the Southeast Asian region.
@@ -378,8 +461,21 @@ $view->open([
 
                     <div style="border: 1px solid rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; background: rgba(255,255,255,0.02);">
                         <h6 style="color: #007bff; text-transform: uppercase; letter-spacing: 1px;">Previous Records</h6>
-                        <p style="font-size: 15px; margin-bottom: 20px;">
+                        <!--<p style="font-size: 15px; margin-bottom: 20px;">
                             Japan dominated the 2025 championships in Thailand with 16 of the 22 gold medals that were staked, followed by Malaysia with two and South Korea, China, Hong Kong and Uzbekistan with one gold each.
+                        </p>-->
+
+                        <div style="width: 100%; height: 1px; background: rgba(255,255,255,0.1); margin: 20px 0;"></div>
+
+                        <p style="font-size: 15px; margin-bottom: 20px;">
+                            From March 2026, the Philippines hosted the Asian Track Cycling Championships in Tagaytay, welcoming 16 nations to its newly built UCI-standard indoor velodrome. The event featured 44 gold-medal races across Elite and Junior categories.
+                        </p>
+
+                        <div style="width: 100%; height: 1px; background: rgba(255,255,255,0.1); margin: 20px 0;"></div>
+                        
+                        <h6 style="color: #007bff; text-transform: uppercase; letter-spacing: 1px;">A New Asian Record in Tagaytay</h6>
+                        <p style="font-size: 15px; margin-bottom: 20px;">
+                            Japan's Kaiya Ota broke his own Asian Record in the Men Elite Sprint 200m flying time trial, clocking 9.348 seconds at an average speed of 77.021 km/h. The time was officially recorded as a New Asian Record and was the fastest qualifying time of the field.
                         </p>
 
                         <div style="width: 100%; height: 1px; background: rgba(255,255,255,0.1); margin: 20px 0;"></div>
@@ -391,7 +487,7 @@ $view->open([
 
                         <div style="background: rgba(255,0,0,0.1); padding: 15px; border-radius: 8px; text-align: center; border: 1px solid rgba(255,0,0,0.3);">
                             <span style="color: #ff4d4d; font-weight: bold; text-transform: uppercase; font-size: 12px;">Important Deadline</span>
-                            <h5 style="color: #fff; margin: 5px 0 0 0;">January 15</h5>
+                            <h5 style="color: #fff; margin: 5px 0 0 0;">03 November 2026</h5>
                             <p style="font-size: 12px; margin: 0; opacity: 0.7;">Registration Deadline</p>
                         </div>
                     </div>
@@ -432,93 +528,32 @@ $view->open([
                     </div>
                 </div>
 
+                <div class="col-lg-6">
+                    <div class="gallery-card" style="position: relative; overflow: hidden; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); height: 350px;">
+                        <img src="assets/images/gallery/cyclist-velo.jpg" alt="World-Class Competition - UCI Standard" onclick="openLightbox(this)" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+
+                        <div class="gallery-overlay" style="position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); padding: 20px; pointer-events: none;">
+                            <span style="background: #C5A059; color: #000; padding: 2px 8px; font-size: 10px; font-weight: bold; border-radius: 4px; text-transform: uppercase;">UCI Standard<</span>
+                            <h4 style="color: #fff; margin: 5px 0 0; font-size: 18px;">World-Class Competition</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="gallery-card" style="position: relative; overflow: hidden; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); height: 350px;">
+                        <img src="assets/images/gallery/ota.jpg" alt="Kaiya Ota - New Asian Record in Tagaytay " onclick="openLightbox(this)" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+
+                        <div class="gallery-overlay" style="position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); padding: 20px; pointer-events: none;">
+                            <span style="background: #C5A059; color: #000; padding: 2px 8px; font-size: 10px; font-weight: bold; border-radius: 4px; text-transform: uppercase;">Kaiya Ota</span>
+                            <h4 style="color: #fff; margin: 5px 0 0; font-size: 18px;">New Asian Record in Tagaytay</h4>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
 
-        <style>
-            /* --- LIGHTBOX (POPUP) STYLE --- */
-            
-            .gallery-card img {
-                cursor: pointer;
-                transition: transform 0.4s ease, filter 0.3s ease;
-            }
-            
-            .gallery-card:hover img {
-                transform: scale(1.05);
-                filter: brightness(1.1);
-            }
-            /* Black Background Overlay */
-            
-            #lightbox-modal {
-                display: none;
-                position: fixed;
-                z-index: 9999;
-                padding-top: 60px;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(5, 5, 5, 0.95);
-                backdrop-filter: blur(5px);
-            }
-            /* Zoomed Image */
-            
-            .lightbox-content {
-                margin: auto;
-                display: block;
-                width: auto;
-                max-width: 90%;
-                max-height: 85vh;
-                border: 2px solid #C5A059;
-                /* Gold Border */
-                box-shadow: 0 0 50px rgba(197, 160, 89, 0.2);
-                animation: zoomIn 0.4s;
-            }
-            
-            @keyframes zoomIn {
-                from {
-                    transform: scale(0.8);
-                    opacity: 0;
-                }
-                to {
-                    transform: scale(1);
-                    opacity: 1;
-                }
-            }
-            /* Close Button */
-            
-            .close-btn {
-                position: absolute;
-                top: 20px;
-                right: 40px;
-                color: #C5A059;
-                font-size: 50px;
-                font-weight: bold;
-                transition: 0.3s;
-                cursor: pointer;
-                font-family: sans-serif;
-            }
-            
-            .close-btn:hover {
-                color: #fff;
-                text-shadow: 0 0 10px #C5A059;
-            }
-            /* Caption */
-            
-            #caption {
-                margin: auto;
-                display: block;
-                width: 80%;
-                max-width: 700px;
-                text-align: center;
-                color: #ccc;
-                padding: 10px 0;
-                font-family: 'Manrope', sans-serif;
-                letter-spacing: 2px;
-                font-size: 1.1rem;
-            }
-        </style>
 
         <div id="lightbox-modal">
             <span class="close-btn" onclick="closeLightbox()">&times;</span>
@@ -579,11 +614,11 @@ $view->open([
         <div class="container">
             <div class="footer-inner">
                 <div class="row">
-                    <div class="col-xl-3 col-md-6">
+                    <div class="col-xl-4 col-md-6">
                         <div class="footer-widget">
                             <div class="footer-logo"><img src="assets/images/2026_ACC_TAC_Letterhead_1.png" alt="footer-logo">
                             </div>
-                            <p class="footer-text">Experience the Speed and Excitement of Track Asia Cup 2026, Where Champions Race for Glory!
+                            <p class="footer-text">Track Asia Cup 2026 — Experience the Speed and Excitement as Champions Race for Glory!
                             </p>
                             <div class="social-links">
                                 <!-- <a href="https://www.facebook.com/profile.php?id=100094321766590" class="platform"><i
@@ -597,18 +632,22 @@ $view->open([
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6 col-sm-6">
+                    <div class="col-xl-4 col-md-6 col-sm-6">
                         <div class="footer-widget">
-                            <h3 class="footer-widget-title"><span class="decorator"></span> ESSENTIAL LINKS</h3>
+                            <h3 class="footer-widget-title"><span class="decorator"></span> OUR PARTNERS</h3>
                             <ul class="widget-items cata-widget">
-                                <li class="widget-list-item"><a href="/about">ABOUT US</a></li>
-                                <!--  <li class="widget-list-item"><a href="/match-schedule">SCHEDULE</a></li> -->
-                                <li class="widget-list-item"><a href="/team">Technical Guide</a></li>
-                                <!--    <li class="widget-list-item"><a href="/league-standings">AWARDING</a></li>
+                                <li class="widget-list-item"><a href="https://www.uci.org/" target="_blank" rel="noopener noreferrer">Union Cycliste Internationale</a></li>
+                                <li class="widget-list-item"><a href="https://www.accasia.org/" target="_blank" rel="noopener noreferrer">Asian Cycling Confederation</a></li>
+                                <li class="widget-list-item"><a href="https://psc.gov.ph/" target="_blank" rel="noopener noreferrer">Philippine Sports Commission</a></li>
+                                <li class="widget-list-item"><a href="https://www.tagaytay.gov.ph//" target="_blank" rel="noopener noreferrer">Tagaytay City Government</a></li>
+                                <li class="widget-list-item"><a href="https://www.olympic.ph/" target="_blank" rel="noopener noreferrer">Philippine Olympic Committee</a></li>
+                                <li class="widget-list-item"><a href="https://www.facebook.com/philcycling/" target="_blank" rel="noopener noreferrer">Philcycling</a></li>
+                                <!-- <li class="widget-list-item"><a href="/about">ABOUT US</a></li>-->
+                                <!--   <li class="widget-list-item"><a href="/match-schedule">SCHEDULE</a></li> -->
+                                <!-- <li class="widget-list-item"><a href="/team">Technical Handbook</a></li>-->
+                                <!--  <li class="widget-list-item"><a href="/league-standings">AWARDING</a></li>
                                 <li class="widget-list-item"><a href="/gallery">GALLERY</a></li>
                                 <li class="widget-list-item"><a href="/contact">CONTACT</a></li> -->
-                                <!-- <li class="widget-list-item"><a href="/shop">PRICE TABLE</a></li> -->
-                                <!-- <li class="widget-list-item"><a href="/shop">SHOP</a></li> -->
                                 <!-- <li class="widget-list-item"><a href="/team">OUR PLAYERS</a></li> -->
                                 <!-- <li class="widget-list-item"><a href="/venue">ARENA</a></li> -->
                                 <!-- <li class="widget-list-item"><a href="/team-details">TEAM DETAILS</a></li> -->
@@ -618,18 +657,16 @@ $view->open([
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6">
+                    <div class="col-xl-4 col-md-6">
                         <div class="footer-widget address-widget">
                             <h3 class="footer-widget-title"><span class="decorator"></span> GET IN TOUCH</h3>
                             <ul>
-                                <li class="widget-list-item"><i class="fas fa-envelope-open"></i><a href="mailto:philcycling.offroad@gmail.com">philcycling@gmail.com</a>
-                                </li>
+                                <li class="widget-list-item"><i class="fas fa-envelope-open"></i><a href="mailto:philcycling.offroad@gmail.com">philcycling@gmail.com</a></li>
+                                <li class="widget-list-item"><i class="fab fa-facebook-f"></i><a href="https://www.facebook.com/philcycling/">Philcycling</a></li>
                                 <!-- <li class="widget-list-item"><i class="fas fa-phone"></i><a href="tel:09877788890">098
                                         777
                                         888 90</a></li> -->
-                                <li class="widget-list-item"><i class="fas fa-map-marker-alt"></i> <span>TAGAYTAY CITY
-                                VELODROME, <br> CITY SPORTS COMPLEX,<br>
-                                TAGAYTAY CITY</span></li>
+                                <li class="widget-list-item"><i class="fas fa-map-marker-alt"></i> <span>TAGAYTAY CT VELODROME, <br> CRISANTO M. DE LOS REYES AVE, TAGAYTAY CITY, CAVITE, 4120, PHILIPPINES <br></span></li>
                             </ul>
                         </div>
                     </div>

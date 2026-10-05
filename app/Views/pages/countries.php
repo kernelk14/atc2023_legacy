@@ -154,7 +154,7 @@ $countries = [
         'code' => 'KSA',
         'name' => 'Saudi Arabia',
         'flag' => 'assets/images/flags/saudi-arabia.jpg',
-        'flag-bg' => 'assets/images/flags-background/saudi-arabia-bg-1.jpg',
+        'flag-bg' => 'assets/images/flags-background/saudi-arabia-bg.jpg',
         'status' => 'registered',
         'registration_date' => 'Pending',
 
@@ -246,6 +246,19 @@ $countries = [
         'name' => 'Malaysia',
         'flag' => 'assets/images/flags/malaysia.jpg',
         'flag-bg' => 'assets/images/flags-background/malaysia-bg.jpg',
+        'status' => 'not-participating',
+        'registration_date' => 'Pending',
+
+        'delegates' => [],
+
+        'entries' => [],
+    ],
+
+    'UAE' => [
+        'code' => 'UAE',
+        'name' => 'United Arab Emirates',
+        'flag' => 'assets/images/flags/united-arab-emirates.jpg',
+        'flag-bg' => 'assets/images/flags-background/united-arab-bg.jpg',
         'status' => 'not-participating',
         'registration_date' => 'Pending',
 

@@ -93,7 +93,12 @@ $active = $active ?? '';
                 <div class="navbar-inner">
                     <div class="letterhead">
                         <div class="letterhead-inner">
-                            <a href="/"><img src="assets/images/banner/tac2026-lh.png" alt="ACC Letterhead" class="letterhead-logo"></a>
+                            <a href="/"><img src="assets/images/banner/tac2026-lh-1.png" alt="ACC Letterhead" class="letterhead-logo"></a>
+                        </div>
+                    </div>
+                    <div class="letterhead">
+                        <div class="letterhead-inner">
+                            <a href="/"><img src="assets/images/banner/tac2026-lh-logo.png" alt="ACC Letterhead" class="letterhead-logo"></a>
                         </div>
                     </div>
                     <!-- <a href="/" class="logo"><img src="assets/images/2026_ACC_TAC_Letterhead_1.png" alt="sportius-logo" width="110" height="150"></a>
@@ -117,9 +122,10 @@ $active = $active ?? '';
                                 <li class="has-dropdown">
                                     <a class="menu-item" href="/about">About</a>
                                     <ul class="dropdown-ul">
-                                        <li class="dropdown-li"><a class="dropdown-link" href="/about-city">About the City</a>
-                                            <li class="dropdown-li"><a class="dropdown-link" href="/about-competition">About the Competition</a>
-                                                <li class="dropdown-li"><a class="dropdown-link" href="/about-organizer">About the organizer</a>
+                                        <li class="dropdown-li"><a class="dropdown-link" href="/about-city">About Tagaytay City</a>
+                                        <li class="dropdown-li"><a class="dropdown-link" href="/about-competition">About the Competition</a>
+                                        <li class="dropdown-li"><a class="dropdown-link" href="/about-organizer">About the organizer</a>
+                                        <li class="dropdown-li"><a class="dropdown-link" href="/organization">Organization</a></li>
                                     </ul>
                                     </li>
 
@@ -131,11 +137,10 @@ $active = $active ?? '';
                                                     <!-- <li class="dropdown-li"><a class="dropdown-link"
                                                             href="/match-schedule">Schedule</a>
                                                     </li> -->
-                                                    <li class="dropdown-li"><a class="dropdown-link" href="/team">Technical Handbook</a>
-                                                    </li>
-
-                                                    <li class="dropdown-li"><a class="dropdown-link" href="/venue">Vicinity Map of Velodrome</a>
-                                                    </li>
+                                                    <li class="dropdown-li"><a class="dropdown-link" href="/team">Technical Handbook</a></li>
+                                                    <li class="dropdown-li"><a class="dropdown-link" href="/venue">Vicinity Map of Velodrome</a></li>
+                                                    <li class="dropdown-li"><a class="dropdown-link" href="/race-schedule">Competition Schedule</a></li>
+                                                    <li class="dropdown-li"><a class="dropdown-link" href="/start-list">Start Lists & Results</a></li>
                                                     <!--  <li class="dropdown-li"><a class="dropdown-link"
                                                             href="/league-standings">Awarding</a>
                                                     </li> -->
@@ -184,15 +189,15 @@ $active = $active ?? '';
                                         </ul>
                                     </li>
 
-                                    <li class="has-dropdown"><a class="menu-item" href="/race-schedule">Race Info</a>
+                                     <!--<li class="has-dropdown"><a class="menu-item" href="/home">Race Info</a>
                                         <ul class="dropdown-ul">
-                                            <li class="dropdown-li"><a class="dropdown-link" href="/race-schedule">Race Schedule</a></li>
+                                           <li class="dropdown-li"><a class="dropdown-link" href="/race-schedule">Competition Schedule</a></li>
                                             <li class="dropdown-li"><a class="dropdown-link" href="/start-list">Start Lists & Results</a></li>
                                         </ul>
-                                    </li>
-                                    <li class="has-dropdown"><a class="menu-item" href="/organization">Contact Us</a>
+                                    </li>-->
+                                    <li class="has-dropdown"><a class="menu-item" href="/contact-us">Contact Us</a>
                                         <ul class="dropdown-ul">
-                                            <li class="dropdown-li"><a class="dropdown-link" href="/organization">Organization</a></li>
+                                            <li class="dropdown-li"><a class="dropdown-link" href="/tourism">Tourism</a></li>
                                             <li class="dropdown-li"><a class="dropdown-link" href="/emergency-contact">Emergency Contact</a></li>
                                         </ul>
                                     </li>
@@ -228,7 +233,7 @@ $active = $active ?? '';
                     </div>
                     <div class="header-action-items header-action-items1">
                         <div class="search-part">
-                            <div class="search-icon action-item icon"><i class="rt-search"></i></div>
+                            <!--<div class="search-icon action-item icon"><i class="rt-search"></i></div>  Search Icon is Removed-->
                             <div class="search-input-area">
                                 <div class="container">
                                     <div class="search-input-inner">
@@ -408,11 +413,13 @@ $active = $active ?? '';
                             </li>
                             <li class="mega-dropdown-li">
                                 <ul class="mega-dropdown-ul mm-show">
-                                    <li class="dropdown-li"><a class="dropdown-link" href="/about-city">About the City</a>
+                                    <li class="dropdown-li"><a class="dropdown-link" href="/about-city">About Tagaytay City</a>
                                     </li>
                                     <li class="dropdown-li"><a class="dropdown-link" href="/about-competition">About the Competition</a>
                                     </li>
                                     <li class="dropdown-li"><a class="dropdown-link" href="/about-organizer">About the Organizer</a>
+                                    </li>
+                                    <li class="dropdown-li"><a class="dropdown-link" href="/about-organizer">Organization</a>
                                     </li>
                                     <!-- <li class="dropdown-li"><a class="dropdown-link" href="/event-details">Event
                                                                                         Details</a>
@@ -458,6 +465,10 @@ $active = $active ?? '';
                                     </li>
                                     <li class="dropdown-li"><a class="dropdown-link" href="/venue">Vicinity Map of Velodrome</a>
                                     </li>
+                                    <li class="dropdown-li"><a class="dropdown-link" href="/race-schedule">Competition Schedule</a>
+                                    </li>
+                                    <li class="dropdown-li"><a class="dropdown-link" href="/start-list">Start Lists and Results</a>
+                                    </li>
                                     <!-- <li class="dropdown-li"><a class="dropdown-link" href="/event-details">Event
                                                                 Details</a>
                                                         </li>
@@ -480,7 +491,7 @@ $active = $active ?? '';
                         </ul>
                     </li>
                     <li class="has-dropdown firstlvl">
-                        <a class="mm-link" href="#">Race Info <i class="rt-angle-down"></i></a>
+                        <!--<a class="mm-link" href="#">Race Info <i class="rt-angle-down"></i></a>-->
                         <ul class="sub-menu mega-dropdown-mobile">
                             <li class="mega-dropdown-li">
                                 <ul class="mega-dropdown-ul mm-show">
@@ -498,11 +509,7 @@ $active = $active ?? '';
                             </li>
                             <li class="mega-dropdown-li">
                                 <ul class="mega-dropdown-ul mm-show">
-                                    <li class="dropdown-li"><a class="dropdown-link" href="/race-schedule">Race Schedule</a>
-                                    </li>
-
-                                    <li class="dropdown-li"><a class="dropdown-link" href="/start-list">Start Lists and Results</a>
-                                    </li>
+                                    
 
                                     <!-- <li class="dropdown-li"><a class="dropdown-link" href="/event-details">Event
                                                                                                             Details</a>
@@ -544,7 +551,7 @@ $active = $active ?? '';
                             </li>
                             <li class="mega-dropdown-li">
                                 <ul class="mega-dropdown-ul mm-show">
-                                    <li class="dropdown-li"><a class="dropdown-link" href="/organization">Organization</a>
+                                    <li class="dropdown-li"><a class="dropdown-link" href="/tourism">Tourism</a>
                                     </li>
                                     <li class="dropdown-li"><a class="dropdown-link" href="/emergency-contact">Emergency Contact</a>
                                     </li>
