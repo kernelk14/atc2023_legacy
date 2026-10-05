@@ -1,5 +1,6 @@
 <?php
 require __DIR__ . '/countries.php';
+// comment
 ?>
 
 <?php
