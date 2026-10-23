@@ -703,9 +703,9 @@ $view->open([
                     </div>
                     <div class="org-card vip-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="org-img-wrap">
-                            <img src="assets/images/organization/avelino-sumagui.jpg" alt="Avelino Sumagui" loading="lazy">
+                            <img src="assets/images/organization/mike-lapitan.jpg" alt="Mike Lapitan" loading="lazy">
                         </div>
-                        <h4 class="name">Atty. Avelino M. Sumagui</h4>
+                        <h4 class="name">Atty. Mike Lapitan</h4>
                         <span class="role">Secretary General</span>
                         <small style="color:#bbb; font-size:11px; display:block; margin-top:4px;">Integrated Cycling Federation of the Philippines</small>
                     </div>

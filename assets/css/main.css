@@ -27899,6 +27899,38 @@ button,
     }
 }
 
+/* Darker overlay for non-clickable flags */
+.nations-section div.nation-card .nation-flag {
+    filter: none !important;
+    transform: none !important;
+}
+
+.nations-section div.nation-card::after {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    z-index: 3;
+    border-radius: 3px;
+    pointer-events: none;
+
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.50) 0%,
+        rgba(0, 0, 0, 0.65) 50%,
+        rgba(0, 0, 0, 0.80) 100%
+    );
+}
+
+/* Clickable flags stay clear */
+.nations-section a.nation-card .nation-flag {
+    filter: none;
+}
+
+.nations-section a.nation-card:hover .nation-flag {
+    transform: scale(1.06);
+    filter: brightness(0.65);
+}
+
 /* =========================================================
    COUNTRY DETAIL PAGE
    ========================================================= */

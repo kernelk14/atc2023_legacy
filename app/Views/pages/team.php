@@ -415,7 +415,7 @@ $view->open([
                             <div class="match-scores">
                                 <div class="club club1">
                                     <div class="club-logo mr--20">
-                                        <span class="club-name"> COMPETITION WILL RUN ACCORDINGLY TO THE LATEST UCI
+                                        <span class="club-name"> ALL COMPETITIONS WILL RUN ON UCI REGULATIONS
                                             RULES.</span>
                                         <!--<img src="assets/images/clubs/1.png" alt="club-logo">-->
                                     </div>
