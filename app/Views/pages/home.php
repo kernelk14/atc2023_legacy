@@ -1817,7 +1817,7 @@ $view->open([
                 <div class="row">
                     <div class="col-xl-4 col-md-6">
                         <div class="footer-widget">
-                            <div class="footer-logo"><img src="assets/images/2026_ACC_TAC_Letterhead_1.png" alt="footer-logo">
+                            <div class="footer-logo"><img src="assets/images/2026_ACC_TAC_Letterhead_1.webp" alt="footer-logo">
                             </div>
                             <p class="footer-text">Track Asia Cup 2026 — Experience the Speed and Excitement as Champions Race for Glory!</p>
                             <div class="social-links">
@@ -1927,45 +1927,46 @@ $view->open([
     </div>
     <!--================= Footer End Here =================-->
 
-<?php $view->close(['extraFooter' => '
-    <script>
-        // Set the date: December 1, 2026
-        var countDownDate = new Date("December 1, 2026 08:00:00").getTime();
-        
-        // Update the count down every 1 second
-        var x = setInterval(function() {
-            var now = new Date().getTime();
-            var distance = countDownDate - now;
 
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    <?php $view->close(['extraFooter' => '
+        <script>
+            // Set the date: December 1, 2026
+            var countDownDate = new Date("December 1, 2026 08:00:00").getTime();
+            
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
 
-            document.getElementById("days").innerHTML = days;
-            document.getElementById("hours").innerHTML = hours;
-            document.getElementById("minutes").innerHTML = minutes;
-            document.getElementById("seconds").innerHTML = seconds;
-        }, 1000);
-    </script>
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                document.getElementById("days").innerHTML = days;
+                document.getElementById("hours").innerHTML = hours;
+                document.getElementById("minutes").innerHTML = minutes;
+                document.getElementById("seconds").innerHTML = seconds;
+            }, 1000);
+        </script>
 
-    <script>
-        AOS.init({
-            duration: 1000, // 1 second animation speed
-            once: true, // Isang beses lang gagalaw
-        });
-    </script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <script>
-        function showATCVideo() {
-            const preview = document.querySelector(".previous-video-preview");
-            const video = document.getElementById("previous-championship-video");
+        <script>
+            AOS.init({
+                duration: 1000, // 1 second animation speed
+                once: true, // Isang beses lang gagalaw
+            });
+        </script>
 
-            video.src = "https://www.youtube.com/embed/s--scpKdw1w?autoplay=1&rel=0";
+        <script>
+            function showATCVideo() {
+                const preview = document.querySelector(".previous-video-preview");
+                const video = document.getElementById("previous-championship-video");
 
-            preview.style.display = "none";
-        }
-    </script>
-']); ?>
+                video.src = "https://www.youtube.com/embed/s--scpKdw1w?autoplay=1&rel=0";
+
+                preview.style.display = "none";
+            }
+        </script>
+    ']); ?>

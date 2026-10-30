@@ -101,8 +101,8 @@ $active = $active ?? '';
                             <a href="/"><img src="assets/images/banner/tac2026-lh-logo.png" alt="ACC Letterhead" class="letterhead-logo"></a>
                         </div>
                     </div>
-                    <!-- <a href="/" class="logo"><img src="assets/images/2026_ACC_TAC_Letterhead_1.png" alt="sportius-logo" width="110" height="150"></a>
-                        <a href="/" class="logo-sticky"><img src="assets/images/2026_ACC_TAC_Letterhead_1.png" alt="kester-logo"></a> -->
+                    <!-- <a href="/" class="logo"><img src="assets/images/2026_ACC_TAC_Letterhead_1.webp" alt="sportius-logo" width="110" height="150"></a>
+                        <a href="/" class="logo-sticky"><img src="assets/images/2026_ACC_TAC_Letterhead_1.webp" alt="kester-logo"></a> -->
                     <div class="rts-menu">
                         <nav class="menus menu-toggle">
                             <ul class="nav__menu">
@@ -378,7 +378,7 @@ $active = $active ?? '';
                 <button class="slide-bar-close ml--30"><i class="fal fa-times"></i></button>
                 <div class="offset-widget offset-logo mb-30">
                     <a href="/">
-                        <img src="assets/images/2026_ACC_TAC_Letterhead_1.png" alt="logo">
+                        <img src="assets/images/2026_ACC_TAC_Letterhead_1.webp" alt="logo">
                     </a>
                 </div>
             </div>

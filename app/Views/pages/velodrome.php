@@ -1448,7 +1448,7 @@ $view->open([
                 <div class="row">
                     <div class="col-xl-4 col-md-6">
                         <div class="footer-widget">
-                            <div class="footer-logo"><img src="assets/images/2026_ACC_TAC_Letterhead_1.png" alt="footer-logo">
+                            <div class="footer-logo"><img src="assets/images/2026_ACC_TAC_Letterhead_1.webp" alt="footer-logo">
                             </div>
                             <p class="footer-text">Track Asia Cup 2026 — Experience the Speed and Excitement as Champions Race for Glory!
                             </p>

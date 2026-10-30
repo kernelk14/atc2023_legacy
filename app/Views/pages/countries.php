@@ -10,66 +10,9 @@ $countries = [
         'status' => 'registered',
         'registration_date' => 'September 1, 2026',
 
-        'delegates' => [
-            [
-                'name' => 'Juan Dela Cruz',
-                'role' => 'Athlete',
-                'events' => "Men's 100m, 4x100m Relay",
-                'status' => 'confirmed',
-                'photo' => 'assets/images/players/player1.png',
-            ],
+        'delegates' => [],
 
-            [
-                'name' => 'Maria Santos',
-                'role' => 'Athlete',
-                'events' => "Women's Long Jump",
-                'status' => 'confirmed',
-                'photo' => 'assets/images/players/player2.png',
-            ],
-
-            [
-                'name' => 'Carlo Reyes',
-                'role' => 'Coach',
-                'events' => 'Track & Field',
-                'status' => 'confirmed',
-                'photo' => 'assets/images/players/player3.png',
-            ],
-
-            [
-                'name' => 'Ana Garcia',
-                'role' => 'Team Official',
-                'events' => 'Team Management',
-                'status' => 'confirmed',
-                'photo' => 'assets/images/players/player4.png',
-            ],
-
-            [
-                'name' => 'Miguel Tan',
-                'role' => 'Athlete',
-                'events' => "Men's 400m",
-                'status' => 'pending',
-                'photo' => 'assets/images/players/player5.png',
-            ],
-        ],
-
-        'entries' => [
-            [
-                'event' => "Men's 100m",
-                'athletes' => 1,
-            ],
-            [
-                'event' => "Men's 400m",
-                'athletes' => 1,
-            ],
-            [
-                'event' => "Women's Long Jump",
-                'athletes' => 1,
-            ],
-            [
-                'event' => '4x100m Relay',
-                'athletes' => 4,
-            ],
-        ],
+        'entries' => [],
     ],
 
     'TPE' => [

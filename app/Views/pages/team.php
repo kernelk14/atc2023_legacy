@@ -243,6 +243,148 @@ $view->open([
                 transform: rotate(1turn);
             }
         }
+
+        /* =========================================================
+        TECHNICAL HANDBOOK PDF VIEWER 
+        ========================================================= */
+
+        .technical-handbook-viewer {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            margin: 50px auto;
+            background: #111;
+            color: #fff;
+            border: 1px solid #292929;
+            border-radius: 4px; /* Keeps the top corners neat */
+            overflow: hidden;   /* Ensures content stays inside rounded border */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Blue accent bar at top */
+        .technical-handbook-viewer::before {
+            content: "";
+            display: block;
+            height: 4px;
+            background: #007bff;
+        }
+
+        /* Viewer Header */
+        .handbook-viewer-header {
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 18px 25px;
+            background: #111;
+            border-bottom: 1px solid #292929;
+        }
+
+        .handbook-viewer-header > div {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            min-width: 0;
+        }
+
+        .handbook-viewer-header i {
+            color: #007bff !important;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .handbook-viewer-header span {
+            color: #fff !important;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .handbook-download {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 4px;
+            background: #007bff;
+            color: #ffffff !important;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            text-decoration: none !important;
+            white-space: nowrap;
+            flex-shrink: 0;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .handbook-download i {
+            color: #ffffff !important;
+            font-size: 12px;
+            transition: color 0.2s ease;
+        }
+
+        .handbook-download:hover {
+            background: #0056b3;
+            color: #ffffff !important;
+        }
+
+        .handbook-download:hover i {
+            color: #ffffff !important;
+        }
+
+        /* PDF Frame Container */
+        .handbook-pdf-container {
+            width: 100%;
+            height: 750px;
+            background: #181818;
+        }
+
+        .handbook-pdf-container iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 767px) {
+            .technical-handbook-viewer {
+                margin: 30px auto;
+            }
+
+            .handbook-viewer-header {
+                padding: 15px;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+            }
+
+            .handbook-viewer-header span {
+                font-size: 14px;
+            }
+
+            .handbook-download {
+                width: 100%;
+                padding: 10px;
+                font-size: 11px;
+            }
+
+            .handbook-pdf-container {
+                height: 550px;
+            }
+        }
     </style>
 ',
     'banner' => [
@@ -423,20 +565,51 @@ $view->open([
 
                             </div>
 
-                            <div class="row justify-content-center" style="margin-top: 50px; margin-bottom: 50px;">
+                            <!-- =========================================================
+                                TECHNICAL HANDBOOK PDF VIEWER
+                                ========================================================= -->
+                            
+                                <div class="technical-handbook-viewer">
+                                <div class="handbook-viewer-header">
+                                    <div>
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>TECHNICAL HANDBOOK</span>
+                                    </div>
+                                    <a
+                                        href="https://drive.google.com/uc?export=download&id=19avInxgkc9mY7Lf6jh6T3z1uaZhdhe7x"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="handbook-download"
+                                    >
+                                        <i class="fas fa-download"></i>
+                                        Download PDF
+                                    </a>
+                                </div>
+                                <div class="handbook-pdf-container">
+                                    <iframe
+                                        src="https://drive.google.com/file/d/19avInxgkc9mY7Lf6jh6T3z1uaZhdhe7x/preview"
+                                        width="100%"
+                                        height="100%"
+                                        title="Track Asia Cup 2026 Technical Handbook"
+                                        allow="autoplay"
+                                    >
+                                        <p>
+                                            Your browser does not support embedded PDFs.
+                                            <a href="https://drive.google.com/uc?export=download&id=19avInxgkc9mY7Lf6jh6T3z1uaZhdhe7x">
+                                                Download the Technical Handbook here.
+                                            </a>
+                                        </p>
+                                    </iframe>
+                                </div>
+                            </div>
+
+                            <!--<div class="row justify-content-center" style="margin-top: 50px; margin-bottom: 50px;">
                                 <div class="col-12 text-center">
                                     <a href="https://drive.google.com/uc?export=download&id=19avInxgkc9mY7Lf6jh6T3z1uaZhdhe7x" class="rts-btn btn-primary" style="padding: 15px 40px; font-size: 18px; border-radius: 5px; text-transform: uppercase; letter-spacing: 1px;">
                                         <i class="fas fa-file-pdf" style="margin-right: 10px;"></i> View Technical Handbook
                                     </a>
-
-                                    <!-- <a href="assets/downloads/vicinity-map.pdf" target="_blank" class="rts-btn btn-primary" style="margin-left: 20px; padding: 15px 40px; font-size: 18px; border-radius: 5px; text-transform: uppercase; letter-spacing: 1px; background-color: #28a745; border-color: #28a745;">
-                                        <i class="fas fa-map" style="margin-right: 10px;"></i> DOWNLOAD VICINITY MAP
-                                    </a> -->
-
-                                    <!-- <p style="color: #999; font-size: 13px; margin-top: 15px;">Official V1.2 (PDF
-                                        Format)</p> -->
                                 </div>
-                            </div>
+                            </div>-->
 
                             <div class="container" style="padding-bottom: 50px;">
                                 <div class="row g-4 justify-content-center">
@@ -744,7 +917,7 @@ $view->open([
                 <div class="row">
                     <div class="col-xl-4 col-md-6">
                         <div class="footer-widget">
-                            <div class="footer-logo"><img src="assets/images/2026_ACC_TAC_Letterhead_1.png" alt="footer-logo">
+                            <div class="footer-logo"><img src="assets/images/2026_ACC_TAC_Letterhead_1.webp" alt="footer-logo">
                             </div>
                             <p class="footer-text">Track Asia Cup 2026 — Experience the Speed and Excitement as Champions Race for Glory!
                             </p>

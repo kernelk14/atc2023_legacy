@@ -27,6 +27,7 @@
     <!--================= Main Script =================-->
     <script src="assets/js/main.js"></script>
     <?= $extraFooter ?>
+    <?php include __DIR__ . '/technical-handbook-widget.php'; ?>
 </body>
 
 </html>

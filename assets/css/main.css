@@ -29890,3 +29890,248 @@ body {
     max-width: 100%;
     overflow-x: hidden;
 }
+
+
+
+/* =========================================
+   TECHNICAL HANDBOOK FLOATING WIDGET (HUD STYLE)
+   ========================================= */
+
+.handbook-widget {
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    z-index: 9990;
+    width: 440px;
+    max-width: calc(100vw - 32px);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+
+    /* Deep futuristic broadcast dark glass background */
+    background: linear-gradient(
+        135deg,
+        rgba(3, 14, 32, 0.96) 0%,
+        rgba(2, 8, 20, 0.99) 100%
+    );
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    /* Sleek precision border with a cyan tech accent */
+    border: 1px solid rgba(0, 210, 255, 0.35);
+    border-left: 4px solid #00c8ff;
+    border-radius: 16px;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.6),
+        0 0 25px rgba(0, 180, 255, 0.15);
+
+    /* Text color guarantee against global stylesheet overrides */
+    color: #ffffff !important;
+
+    /* 5-second delay + smooth entrance animation */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: handbookWidgetAppear 0.8s cubic-bezier(0.16, 1, 0.3, 1) 5s forwards;
+    transition: none;
+}
+
+.handbook-widget-hidden {
+    opacity: 0 !important;
+    transform: translateY(20px) !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+    animation: none !important;
+}
+
+@keyframes handbookWidgetAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Monogram Logo Container */
+.handbook-widget-logo {
+    width: 58px;
+    height: 58px;
+    flex: 0 0 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 180, 255, 0.06);
+    border: 1px solid rgba(0, 180, 255, 0.2);
+    border-radius: 12px;
+    padding: 6px;
+}
+
+.handbook-widget-logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(0, 180, 255, 0.4));
+}
+
+.handbook-widget-divider {
+    display: none;
+}
+
+/* Text Content Area */
+.handbook-widget-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.handbook-widget-eyebrow {
+    display: block;
+    margin-bottom: 6px;
+    color: #00e1ff !important;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.handbook-widget-info h4 {
+    margin: 0 0 4px !important;
+    color: #ffffff !important;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: 0.3px;
+}
+
+.handbook-widget-info p {
+    margin: 0 !important;
+    color: #94a3b8 !important;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+/* Action Button & Fixed Span Text Color */
+.handbook-widget-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-shrink: 0;
+    padding: 10px 14px;
+    border: 1px solid rgba(0, 180, 255, 0.4);
+    border-radius: 10px;
+    background: linear-gradient(135deg, #0070f3, #0051b4);
+    color: #ffffff !important;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-decoration: none !important;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 112, 243, 0.3);
+    transition: none;
+}
+
+.handbook-widget-button span {
+    color: #ffffff !important;
+}
+
+.handbook-widget-button:hover {
+    background: linear-gradient(135deg, #0070f3, #0051b4);
+    box-shadow: 0 4px 12px rgba(0, 112, 243, 0.3);
+    color: #ffffff !important;
+}
+
+/* Close Button */
+.handbook-widget-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: #64748b;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.handbook-widget-close:hover {
+    color: #ffffff;
+}
+
+/* =========================================
+   TABLET AND MOBILE RESPONSIVE
+   ========================================= */
+
+@media (max-width: 767px) {
+    .handbook-widget {
+        right: 14px;
+        bottom: max(14px, env(safe-area-inset-bottom));
+        left: 14px;
+        width: auto;
+        max-width: none;
+        display: grid;
+        grid-template-columns: 46px minmax(0, 1fr);
+        gap: 10px 12px;
+        padding: 14px;
+        padding-right: 34px;
+        border-radius: 14px;
+    }
+
+    .handbook-widget-logo {
+        width: 46px;
+        height: 46px;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .handbook-widget-info {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: center;
+    }
+
+    .handbook-widget-eyebrow {
+        font-size: 8px;
+        margin-bottom: 2px;
+    }
+
+    .handbook-widget-info h4 {
+        font-size: 13px;
+    }
+
+    .handbook-widget-info p {
+        font-size: 10px;
+    }
+
+    .handbook-widget-button {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        width: 100%;
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    .handbook-widget-close {
+        top: 8px;
+        right: 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .handbook-widget {
+        animation: none;
+        opacity: 1;
+        transform: translateY(0);
+        transition: none;
+    }
+}
